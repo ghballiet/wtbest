@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'Museo Sans 500';
+    src: local("Museo Sans 500"), local("MuseoSans-500"),
+        url('/fonts/MuseeoSans_500.otf') format('opentype'),
+        url('/fonts/MuseoSans_500.svg#MuseoSans-500') format('svg');
+}
+
+@font-face {
+    font-family: 'Museo Sans 700';
+    src: local('Museo Sans 700'), local('MuseoSans-700'),
+        url('/fonts/MuseoSans_700.otf') format('opentype'),
+        url('/fonts/MuseoSans-700.svg#MuseoSans-700') format('svg');
+    font-weight: bold;
+}
+
+/*@font-face {
+    font-family: "Museo Sans";
+    src: url("MuseoSans_700.otf") format("opentype");
+    font-weight: 700;
+}*/
+
+@font-stack: helvetica, lucida grande;
+@font-stack-alt: 'Museo Sans 500', sans-serif;
+@font-size: 14px;
+@line-height: 1.4em;
+
+@shadow-height: 10px;
+@shadow-margin: 3em;
+
+@container-width: 60em;
+@container-margin: 0px auto;
+@container-padding: 0px 1em;
+
+@logo-height: 3em;
+@logo-width: 10em;
+@logo-padding: 1em;
+
+@cl-font: #333;
+
+@cl-bg-top: #222;
+@cl-bg-nav: #222;
+@cl-font-nav: rgba(255,255,255,.6);
+@cl-font-nav-hover: rgba(255,255,255,.9);
+@cl-bg-page: #ddd;
+@cl-bg-footer: #333;
+
+.gradient(@from:transparent, @to:transparent) {
+    background-color: @from;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(@from),to(@to));
+    background: -moz-linear-gradient(top,@from,@to);
+}
+
+.shadow(@x:0px, @y:0px, @z:0px, @color:transparent) {
+    -webkit-box-shadow: @x @y @z @color;
+    -moz-box-shadow: @x @y @z @color;
+    box-shadow: @x @y @z @color;
+}
+
+.round(@radius:0px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.round_bottom(@radius:0px) {
+    -webkit-border-bottom-left-radius: @radius;
+    -webkit-border-bottom-right-radius: @radius;
+    -moz-border-radius-bottomleft: @radius;
+    -moz-border-radius-bottomright: @radius;
+}
+
+.column(@count: 0, @gap: 0px, @rule: none) {
+    -webkit-column-count: @count;
+    -webkit-column-gap: @gap;
+    -webkit-column-rule: @rule;
+    -moz-column-count: @count;
+    -moz-column-gap: @gap;
+    -moz-column-rule: @rule;
+}
