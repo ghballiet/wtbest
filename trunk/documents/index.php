@@ -9,18 +9,17 @@
                         <span class="title">Title</span>
                         <span class="desc">Description</span>
                     </div>
+                    
+                    <?php
+                    $q = 'select * from documents d order by d.title;';
+                    $list = db_query($q);
+                    foreach($list as $l) { ?>
                     <div class="doc">
-                        <span class="title"><a href="#">2010 BEST Guidelines</a></span>
-                        <span class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
-                    </div>
-                    <div class="doc">
-                        <span class="title"><a href="#">2010 BEST Guidelines</a></span>
-                        <span class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
-                    </div>
-                    <div class="doc">
-                        <span class="title"><a href="#">2010 BEST Guidelines</a></span>
-                        <span class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
-                    </div>
+                        <span class="title"><a href="../include/doc/?i=<?php echo $l['id']; ?>"><?php echo $l['title']; ?></a></span>
+                        <span class="desc"><?php echo $l['description']; ?></span>
+                    </div><?php
+                    }
+                    ?>
                     <!-- end of content -->
 
 <?php require('../master/footer.php'); ?>

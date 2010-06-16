@@ -9,27 +9,19 @@
                         <span class="date">Date</span>
                         <span class="time">Time</span>
                         <span class="desc">Description</span>
-                    </div>
+                    </div>                    
+                    <?php
+                    $q = 'select * from events e order by e.date, e.time;';
+                    $list = db_query($q);
+                    foreach($list as $l) {?>
                     <div class="event">
-                        <span class="date">Tuesday June 15</span>
-                        <span class="time">2:00PM</span>
-                        <span class="desc">Here is an example of some text you expect to see. This is an example of some text you might expect to see. Today is an event which is important for the competition.</span>
+                        <span class="date"><?php $format="l F j"; echo date_format(date_create($l['date']),$format); ?></span>
+                        <span class="time"><?php $format="h:iA"; echo date_format(date_create($l['time']),$format); ?></span>
+                        <span class="desc"><?php echo $l['description']; ?></span>
                     </div>
-                    <div class="event">
-                        <span class="date">Wednesday June 17</span>
-                        <span class="time">5:00PM</span>
-                        <span class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
-                    </div>
-                    <div class="event">
-                        <span class="date">Thursday June 18</span>
-                        <span class="time">11:00AM</span>
-                        <span class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
-                    </div>
-                    <div class="event">
-                        <span class="date">Saturday September 15</span>
-                        <span class="time">12:00PM</span>
-                        <span class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
-                    </div>
+                    <?php    
+                    }
+                    ?>
                     <!-- end of content -->
 
 <?php require('../master/footer.php'); ?>

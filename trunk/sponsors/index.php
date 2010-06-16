@@ -4,19 +4,14 @@
 <?php $_POST['custom_css'] = array('sponsors.css'); ?>
 <?php require('../master/header.php'); ?>
 
-                    <!-- content starts here -->
-                    <a href="#"><img src="../include/img/ford.png" /></a>
-                    <a href="#"><img src="http://www.orangeclothingco.com/Walmart_New_Logo.png" /></a>
-                    <a href="#"><img src="http://puffys.be/WEBSITE/images/Mercedes-logo.png" /></a>
-                    <a href="#"><img src="http://www.theheismanwinners.com/images/246px-Texas-Tech-University-logo_1_.png" /></a>
-                    <a href="#"><img src="http://it.uoregon.edu/help/duckware/images/Apple-logo.png" /></a>
-                    <a href="#"><img src="http://www.microsoft.com/indonesia/events/lightup/Images/Microsoft_Logo.png" /></a>
-                    <a href="#"><img src="http://img.labnol.org/files/Google.png" /></a>
-                    <a href="#"><img src="http://www.easypedia.gr/el/images/local/9/9c/Volvo_Cars_logo.png" /></a>
-                    <a href="#"><img src="http://www.namedevelopment.com/blog/dell_logo.png" /></a>
-                    <a href="#"><img src="http://i170.photobucket.com/albums/u275/maddash_focuspc/FreeICE/honda.png"></a>
-                    <a href="#"><img src="http://www.gnec.ac.in/vlsi/images/texas_instruments_logo.png" /></a>
-                    <a href="#"><img src="http://www.wyseniorolympics.com/assets/images/PEPSI_logo.png" /></a>
+                    <!-- content starts here -->                    
+                    <?php
+                    $q = 'select s.id, s.name, s.url from sponsor s order by s.name;';
+                    $list = db_query($q);
+                    foreach($list as $l) {
+                        echo '<a href="' . $l['url'] . '"><img src="../include/img/?i=' . $l['id'] . '" alt="' . $l['name'] . '" title="' . $l['name'] . '"/></a>';
+                    }
+                    ?>
                     <!-- end of content -->
 
 <?php require('../master/footer.php'); ?>

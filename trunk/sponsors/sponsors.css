@@ -15,4 +15,7 @@
   max-width: 5em;
   margin: 1.66666666666667em;
   vertical-align: middle;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.5s linear;
 }
+#content a:hover img { opacity: 1; }

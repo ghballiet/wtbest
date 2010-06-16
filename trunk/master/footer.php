@@ -13,5 +13,6 @@
                 </div>
             </div>
         </div>
+        <?php db_disconnect($link); ?>
     </body>
 </html>

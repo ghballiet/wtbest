@@ -1,5 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <?php require_once('../include/php/functions.php'); ?>
+<?php require_once('../include/php/database.php'); ?>
+<?php $link=db_connect(); ?>
 <html>
     <head>
     <?php if(isset($_POST['title'])){ $page_title = $_POST['title']." | West Texas BEST" ; } else { $page_title = "West Texas BEST"; } ?>
