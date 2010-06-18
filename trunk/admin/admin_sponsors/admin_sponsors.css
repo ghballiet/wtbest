@@ -1,0 +1,23 @@
+﻿
+div.content
+{
+	color:#990000;
+	background-color:#ccccff;
+	padding:10px;
+	margin:1px;
+	margin-right:150px;
+	margin-left:150px;
+	margin-top:50px;
+}
+table, td, th
+{
+	border-collapse:collapse;
+	width:600px;
+	text-align:center;
+}
+td, th
+{
+	border:thin solid #990000;
+	width:600px;
+	text-align:center;
+}

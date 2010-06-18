@@ -1,0 +1,42 @@
+﻿h1.admin_title
+{
+	color:#990000;
+	background-color:white;
+	text-align:center;
+}
+ul
+{
+	list-style-type:none;
+	margin:0,500,0,0;
+	padding:0;
+	overflow:hidden;
+}
+li
+{
+	float:left;
+}
+a:link,a:visited
+{
+	display:block;
+	width:150px;
+	font-weight:bold;
+	color:white;
+	background-color:#003399;
+	text-align:center;
+	padding:4px;
+	margin-left:50px;
+}
+a:hover,a:active
+{
+	background-color:white;
+	color:#003399;
+}
+div.navigation
+{
+	padding:0px;
+	border:2px #003399;
+	margin:0px;
+	text-align:center;
+	width:2500px;
+	background-color:#003399;
+}
