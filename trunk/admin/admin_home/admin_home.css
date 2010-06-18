@@ -1,7 +1,13 @@
-﻿div.content
+﻿body
 {
-	color:#990000;
-	background-color:#ccccff;
+	background-color:#dddddd;
+}
+
+div.content
+{
+	font:italic bold 15px Georgia, serif;
+	color:#333333;
+	background-color:#dddddd;
 	padding:10px;
 	margin:1px;
 	margin-right:150px;
@@ -15,7 +21,7 @@ table
 }
 table, td, th
 {
-	border:thin solid #990000;
+	border:thin solid #333333;
 	padding:5px;
 	margin:5px;
 }
