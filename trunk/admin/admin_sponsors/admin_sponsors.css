@@ -1,23 +1,28 @@
-﻿
+﻿body
+{
+	background-color:#dddddd;
+}
+
 div.content
 {
-	color:#990000;
-	background-color:#ccccff;
+	font:italic bold 15px Georgia, serif;
+	color:#333333;
+	background-color:#dddddd;
 	padding:10px;
 	margin:1px;
 	margin-right:150px;
 	margin-left:150px;
 	margin-top:50px;
 }
-table, td, th
+
+table
 {
 	border-collapse:collapse;
-	width:600px;
-	text-align:center;
 }
-td, th
+table, td, th
 {
-	border:thin solid #990000;
-	width:600px;
-	text-align:center;
+	border:thin solid #333333;
+	padding:5px;
+	margin:5px;
 }
+

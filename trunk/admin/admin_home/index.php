@@ -27,18 +27,19 @@
 			<?php
 				i=array(email_list);
 				foreach ($i as $value)
-					{
+					{ ?>
 					 <tr>
-						<td>echo $value.first_name</td>
-						<td>echo $value.last_name</td>
-						<td>echo $value.email</td>
-						<td>echo $value.org_name</td>
-						<td>echo $value.org_type</td>
-						<td>echo $value.org_zip</td>
+						<td><?php echo $value.first_name ?></td>
+						<td><?php echo $value.last_name ?></td>
+						<td><?php echo $value.email ?></td>
+						<td><?php echo $value.org_name ?></td>
+						<td><?php echo $value.org_type ?></td>
+						<td><?php echo $value.org_zip ?></td>
 						<td><input type="submit" value="Delete" /></td>
 					 </tr>
-					 }
-				?>
+			<?php
+					}
+			?>
 			<form action="email_list.php" method="get">
 				<tr>
 					<td><input type="text" name="first_name" /></td>

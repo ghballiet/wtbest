@@ -1,7 +1,8 @@
 ﻿h1.admin_title
 {
-	color:#990000;
-	background-color:white;
+	font:italic bold 30px Georgia, serif;
+	color:#333333;
+	background-color:#dddddd;
 	text-align:center;
 }
 ul
@@ -17,11 +18,12 @@ li
 }
 a:link,a:visited
 {
+	font:italic bold 15px Georgia, serif;
 	display:block;
 	width:150px;
 	font-weight:bold;
 	color:white;
-	background-color:#003399;
+	background-color:#444444;
 	text-align:center;
 	padding:4px;
 	margin-left:50px;
@@ -29,14 +31,14 @@ a:link,a:visited
 a:hover,a:active
 {
 	background-color:white;
-	color:#003399;
+	color:#000000;
 }
 div.navigation
 {
 	padding:0px;
-	border:2px #003399;
+	border:2px #000000;
 	margin:0px;
 	text-align:center;
 	width:2500px;
-	background-color:#003399;
+	background-color:#444444;
 }
