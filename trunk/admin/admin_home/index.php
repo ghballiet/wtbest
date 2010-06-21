@@ -20,6 +20,10 @@
             <li><a href="../admin_documents/">Add/Edit Documents</a></li>
         </ul>
 	</div>
+
+	
+<!-- Listing of users who have signed up for the Mailing List -->
+<!-- Admin has rights to Delete existing users in list -->
 	<div class="content">
 		<h2>Email List</h2>
 		<table>
@@ -40,6 +44,8 @@
 			<?php
 					}
 			?>
+			
+<!-- Add new user to email list -->			
 			<form action="email_list.php" method="get">
 				<tr>
 					<td><input type="text" name="first_name" /></td>

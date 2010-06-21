@@ -31,7 +31,7 @@ a:link,a:visited
 a:hover,a:active
 {
 	background-color:white;
-	color:#000000;
+	color:#444444;
 }
 div.navigation
 {
@@ -39,6 +39,5 @@ div.navigation
 	border:2px #000000;
 	margin:0px;
 	text-align:center;
-	width:2500px;
 	background-color:#444444;
 }
