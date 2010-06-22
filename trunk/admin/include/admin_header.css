@@ -8,7 +8,7 @@
 ul
 {
 	list-style-type:none;
-	margin:0,500,0,0;
+	margin:0,0,0,0;
 	padding:0;
 	overflow:hidden;
 }
@@ -20,7 +20,6 @@ a:link,a:visited
 {
 	font:italic bold 15px Georgia, serif;
 	display:block;
-	width:150px;
 	font-weight:bold;
 	color:white;
 	background-color:#444444;
@@ -35,9 +34,38 @@ a:hover,a:active
 }
 div.navigation
 {
+	align:center;
 	padding:0px;
 	border:2px #000000;
 	margin:0px;
 	text-align:center;
 	background-color:#444444;
 }
+body
+{
+	background-color:#dddddd;
+}
+
+div.content
+{
+	font:italic bold 15px Georgia, serif;
+	color:#333333;
+	background-color:#dddddd;
+	padding:10px;
+	margin:1px;
+	margin-right:150px;
+	margin-left:150px;
+	margin-top:50px;
+}
+
+table
+{
+	border-collapse:collapse;
+}
+table, td, th
+{
+	border:thin solid #333333;
+	padding:5px;
+	margin:5px;
+}
+
