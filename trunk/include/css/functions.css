@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Museo Sans 500';
+  src: local("Museo Sans 500"), local("MuseoSans-500"), url('/fonts/MuseeoSans_500.otf') format('opentype'), url('/fonts/MuseoSans_500.svg#MuseoSans-500') format('svg');
+}
+@font-face {
+  font-family: 'Museo Sans 700';
+  src: local('Museo Sans 700'), local('MuseoSans-700'), url('/fonts/MuseoSans_700.otf') format('opentype'), url('/fonts/MuseoSans-700.svg#MuseoSans-700') format('svg');
+  font-weight: bold;
+}
