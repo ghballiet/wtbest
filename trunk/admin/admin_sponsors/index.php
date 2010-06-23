@@ -15,6 +15,9 @@
 			    <td><input type="file" id="logo" name="logo" /></td>
 			</tr>
 		</table>
+		<table>
+		  <tr><td><input type="submit" /></td></tr>
+		</table>
 		</form>
 	
 <!-- Manage existing Sponsor Logo/Links EDIT/DELTE -->	

@@ -17,9 +17,10 @@
 	
     <!--Table to Manage existing documents -->	
     <h2>Manage Documents</h2>
-    <form>
+    <form method="post" action="edit/">
+        <input type="hidden" name="docid" id="docid" />
     	<table>
-    		<tr><th>Title</th><th>Description</th><th>File</th><th>Edit</th><th>Delete</th></tr>
+    		<tr><th>Title</th><th>Description</th><th>File</th><th></th><th></th></tr>
     			<?php
     				$q = 'select * from documents d order by d.title;';
                     $list = db_query($q);
@@ -28,7 +29,7 @@
     						<td><?php echo $l[title]?></td>
     						<td><?php echo $l[description]?></td>
     						<td><a href="../../include/doc/?i=<?php echo $l['id']?>">View</a></td>
-    						<td><input type="submit" value="Edit" /></td>
+    						<td><input type="submit" value="Edit" onclick="docid.value='<?php echo $l[id]; ?>';"/></td>
     						<td><input type="submit" value="Delete" /></td>
     					</tr>
     			<?php 

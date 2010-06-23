@@ -2,6 +2,24 @@
 @font-size: 14px;
 @font-stack: helvetica, arial, verdana, sans-serif;
 
+.gradient(@from:transparent, @to:transparent) {
+    background-color: @from;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(@from),to(@to));
+    background: -moz-linear-gradient(top,@from,@to);
+}
+
+.shadow(@x:0px, @y:0px, @z:0px, @color:transparent) {
+    -webkit-box-shadow: @x @y @z @color;
+    -moz-box-shadow: @x @y @z @color;
+    box-shadow: @x @y @z @color;
+}
+
+.round(@radius:0px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+
 body {
     font-family: @font-stack;
     font-size: @font-size;
@@ -57,7 +75,8 @@ a {
     table {
         margin: 0px;
         border-collapse: collapse;
-        font-size: 1em;
+        padding: 0px;
+        font-size: @font-size;
         width: 100%;
 
         th, td {
@@ -68,13 +87,11 @@ a {
         th {
             letter-spacing: -0.06em;
             text-transform: uppercase;
-            color: #fff;
-            background: rgba(0,0,0,.5);
             font-size: .8em;
             
             span {
                 font-size: .9em;
-                color: #bbb;
+                color: #666;
                 display: inline-block;
                 margin-left: 1em;
             }
@@ -88,6 +105,29 @@ a {
                 max-width: 4em;
                 max-height: 4em;
             }
+            
+            input[type="text"], textarea {
+                border: solid 1px #ccc;
+                padding: .5em;
+                font-size: .9 * @font-size;
+                font-family: @font-stack;
+                width: 95%;
+                margin: 0px;
+                color: #999;
+                letter-spacing: normal;
+                background-color: #fff;
+            }
+            
+            textarea {
+                width: 97.5%;
+                min-height: 8em;
+                line-height: 1.4em;
+            }
+            
+            input[type="text"]:focus, textarea:focus {
+                border: solid 1px #c00;
+                color: #333;
+            }
         }
     }
     
@@ -99,11 +139,16 @@ a {
         margin: 0px;
         padding: 0px;
         margin-bottom: 3em;
+        border: solid 1px #999;
+        .round(.25em);
+        padding: 1em;
+        .shadow(0px,2px,3px,rgba(0,0,0,.3));
+        .gradient(transparent,rgba(0,0,0,.02));
     }
     
-    tr:nth-child(2n-1) td {
+/*    tr:nth-child(2n-1) td {
         background-color: #eee;
-    }
+    }*/
 }
 
 #footer {
@@ -129,4 +174,70 @@ a {
         max-height: 2.5em;
         float: right;
     }
+}
+
+@tb-width: 30em;
+
+#main p label {
+    display: inline-block;
+    width: 8em;
+    vertical-align: top;
+    margin-bottom: 1em;
+    color: #666;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#main p input[type="text"], #main p textarea {
+    font-family: @font-stack;
+    padding: .5em;
+    font-size: @font-size;
+    color: #999;
+    vertical-align: top;
+    margin-bottom: 1em;
+    width: @tb-width;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.05)),to(transparent),color-stop(.2,transparent));
+    border: solid 1px #ccc;
+    .round(.25em);
+}
+
+#main p input[type="text"]:focus, #main p textarea:focus {
+    color: #333;
+    border: solid 1px #c00;
+}
+
+#main p textarea {
+    min-height: 15em;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.05)),to(transparent),color-stop(.03,transparent));
+}
+
+#main p input[type="submit"] {
+    padding: .5em 1em;
+    border: solid 1px transparent;
+    .gradient(#c00,#900);
+    color: #fff;
+    font-size: 1em;
+    font-family: @font-stack;
+    text-shadow: 0px 1px 1px rgba(0,0,0,.4);
+    .shadow(0px,2px,3px,rgba(0,0,0,.4));
+    .round(.25em);
+    margin-left: 8em;
+}
+
+#main p input[type="file"] {
+    margin-bottom: 1em;
+}
+
+#main form:first-child table tr:last-child td {
+    text-align: right;
+}
+
+#main form:first-child table tr:last-child td input[type="submit"] {
+    border: solid 1px transparent;
+    font-family: @font-stack;
+    padding: .5em .75em;
+    .gradient(#444,#222);
+    font-size: 1em;
+    color: #fff;
+    .round(.25em);
 }
