@@ -40,7 +40,8 @@
 							<td><?php echo $l[time]?></td>
 							<td><?php echo $l[description]?></td>
 							<td><input type="submit" value="Edit" /></td>
-							<td><input type="submit" value="Delete" /></td>
+							<td><input type="submit" value="Delete" />
+							    </td>
 						</tr>
 					<?php
 					}
