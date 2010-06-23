@@ -3,15 +3,21 @@
     <form>
         <h2>Add Recipient</h2>
         <table>
-            <tr><th>Organization</th><th>First Name</th><th>Last Name</th><th>Email</th><th>ZIP</th></tr>
+            <tr><th>Organization</th><th>First Name</th><th>Last Name</th></tr>
             <tr>
                 <td><input type="text" name="org_name" id="org_name" /></td>
                 <td><input type="text" name="first_name" id="first_name" /></td>
                 <td><input type="text" name="last_name" id="last_name" /></td>
+            </tr>
+        </table>
+        <table>
+            <tr><th>Email</th><th>ZIP</th></tr>
+            <tr>
                 <td><input type="text" name="email" id="email" /></td>
                 <td><input type="text" name="zip" id="zip" maxlength="5" /></td>
             </tr>
         </table>
+        <table><tr><td><input type="submit" /></td></tr></table>
     </form>
     
     <form>

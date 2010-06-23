@@ -17,11 +17,14 @@
 			    <tr><th>Description</th></tr>
 				<tr><td><textarea name="description" id="description"></textarea></td></tr>
 			</table>
-			<input type="submit" value="Submit" />
+			<table>
+			 <tr><td><input type="submit" /></td></tr>
+			</table>
 		</form>
 
         <!-- Manage Events Table -->
-		<form name="manage_events" method="get">
+		<form name="events" method="post" action="edit/">
+		    <input type="hidden" id="eventid" name="eventid" />
 			<h2>Manage Events</h2>
 			<table class="list">
 				<tr>
@@ -39,9 +42,8 @@
 							<td><?php echo $l[date]?></td>
 							<td><?php echo $l[time]?></td>
 							<td><?php echo $l[description]?></td>
-							<td><input type="submit" value="Edit" /></td>
-							<td><input type="submit" value="Delete" />
-							    </td>
+							<td><input type="submit" value="Edit" onclick="eventid.value='<?php echo $l[id]; ?>';"/></td>
+							<td><input type="submit" value="Delete" /></td>
 						</tr>
 					<?php
 					}
