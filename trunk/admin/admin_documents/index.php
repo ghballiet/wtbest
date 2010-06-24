@@ -11,10 +11,6 @@
     		    <td>
     		        <input type="file" name="browse" id="browse"/>
     		    </td>
-				<?php
-					db_udpdate("INSERT INTO documents (title, description, browse)
-						VALUES ('$_POST[title]','$_POST[description]','$_POST[document]')";
-				?>
     		</tr>
     	</table>
     	<table>
