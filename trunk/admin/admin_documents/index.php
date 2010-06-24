@@ -17,6 +17,9 @@
 				?>
     		</tr>
     	</table>
+    	<table>
+    	   <tr><td><input type="submit" value="Submit" /></td></tr>
+    	</table>
     </form>
 	
     <!--Table to Manage existing documents -->	
