@@ -18,6 +18,10 @@
             </tr>
         </table>
         <table><tr><td><input type="submit" /></td></tr></table>
+			<?php
+				db_udpdate("INSERT INTO mailing_list (first_name, last_name, email, org_name, zip, org_type)
+						VALUES ('$_POST[first_name]','$_POST[last_name]','$_POST[email]','$_POST[org_name]','$_POST[zip]','$_POST[org_type]')";
+			?>
     </form>
     
     <form>

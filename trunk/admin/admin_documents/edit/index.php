@@ -20,6 +20,10 @@
         <input type="file" name="file" id="file" />
     </p>
     <p><input type="submit" value="Save Changes"></p>
+	<?php
+		db_udpdate("UPDATE documents SET title=title, description=description, file=document
+					WHERE id=$1");
+	?>
     <?php   
     }
     ?>
