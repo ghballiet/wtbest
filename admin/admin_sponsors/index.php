@@ -18,6 +18,10 @@
 		<table>
 		  <tr><td><input type="submit" /></td></tr>
 		</table>
+		<?php
+			db_udpdate("INSERT INTO sponsors (image, name, url)
+						VALUES ('$_POST[logo]','$_POST[name]','$_POST[url]')";
+		?>
 		</form>
 	
 <!-- Manage existing Sponsor Logo/Links EDIT/DELTE -->	

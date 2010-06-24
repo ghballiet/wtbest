@@ -20,6 +20,10 @@
         <textarea id="description" name="description"><?php echo $l[description]; ?></textarea>
     </p>
     <p><input type="submit" value="Save Changes"></p>
+	<?php
+		db_udpdate("UPDATE events SET date=e.date, time=e.time, description=description
+					WHERE id=$1");
+	?>
     <?php   
     }
     ?>

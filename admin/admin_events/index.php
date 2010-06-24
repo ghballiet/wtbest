@@ -19,6 +19,10 @@
 			</table>
 			<table>
 			 <tr><td><input type="submit" /></td></tr>
+			 <?php
+					db_udpdate("INSERT INTO events (date, time, description)
+						VALUES ('$_POST[e.date]','$_POST[e.time]','$_POST[description]')";
+				?>
 			</table>
 		</form>
 
