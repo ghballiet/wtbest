@@ -20,8 +20,8 @@
     </form>
 	
     <!--Table to Manage existing documents -->	
-    <h2>Manage Documents</h2>
     <form method="post" action="edit/">
+        <h2>Manage Documents</h2>
         <input type="hidden" name="docid" id="docid" />
     	<table>
     		<tr><th>Title</th><th>Description</th><th>File</th><th></th><th></th></tr>
