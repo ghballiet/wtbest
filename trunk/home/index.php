@@ -1,10 +1,23 @@
 <?php $_POST['title'] = 'Home'; ?>
 <?php $_POST['callout_title'] = 'Welcome to West Texas Best.'; ?>
 <?php $_POST['callout_text'] = 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.';?>
-<?php $_POST['custom_css'] = array('home.css'); ?>
+<?php $_POST['custom_css'] = array('../include/css/nivo-slider.css','home.css'); ?>
+<?php $_POST['custom_js'] = array('../include/js/jquery.nivo.slider.pack.js'); ?>
 <?php require('../master/header.php'); ?>
 
                     <!-- content starts here -->
+                    <!-- image slideshow -->
+                    <div id="slider">
+                        <?php
+                        $q = "select p.id, p.caption from photos p;";
+                        $list = db_query($q);
+                        foreach($list as $l) {?>
+    <img src="photo.php?i=<?php echo $l[id]; ?>" title="<?php echo $l[caption]; ?>" alt="" />
+                        <?php    
+                        }
+                        ?>
+</div>
+                    <!-- mailing list signup -->
                     <div id="signup">
                         <h2>Sign Up for our Mailing List</h2>
                         <form>
@@ -56,6 +69,13 @@
 
                     <p>Ut convallis, sem sit amet interdum consectetuer, odio augue aliquam leo, nec dapibus tortor nibh sed augue. Integer eu magna sit amet metus fermentum posuere. Morbi sit amet nulla sed dolor elementum imperdiet. Quisque fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque adipiscing eros ut libero. Ut condimentum mi vel tellus. Suspendisse laoreet. Fusce ut est sed dolor gravida convallis. Morbi vitae ante. Vivamus ultrices luctus nunc. Suspendisse et dolor. Etiam dignissim. Proin malesuada adipiscing lacus. Donec metus. Curabitur gravida.</p>
                     
+                    <script type="text/javascript">
+                    $(window).load(function() {
+                       $('#slider').nivoSlider({
+                           effect:'fade',                          
+                       });
+                    });
+                    </script>
                     <!-- end of content -->
 
 <?php require('../master/footer.php'); ?>

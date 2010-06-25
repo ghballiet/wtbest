@@ -7,18 +7,25 @@
     <?php if(isset($_POST['title'])){ $page_title = $_POST['title']." | West Texas BEST" ; } else { $page_title = "West Texas BEST"; } ?>
     <title><?php echo htmlentities($page_title); ?></title>
 
-    <!-- css -->
-    <link rel="stylesheet" type="text/css" href="../include/css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="../include/css/master.css" />
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="../include/css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="../include/css/master.css" />
     <?php foreach($_POST['custom_css'] as $cssfile) {
-        echo '<link rel="stylesheet" type="text/css" href="' . $cssfile . '" />';
+        echo '    <link rel="stylesheet" type="text/css" href="' . $cssfile . '" />';
+        echo "\n        ";
     } ?>
 
-    <!-- javascript -->
-    <script src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
-    <script src="../include/js/css-gradients-via-canvas.js"></script>
-
-    </head>
+        <!-- javascript -->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../include/js/css-gradients-via-canvas.js"></script>
+    <?php
+    if(isset($_POST['custom_js'])) {
+        foreach ($_POST['custom_js'] as $jsfile) {?>
+    <script type="text/javascript" src="<?php echo $jsfile; ?>"></script>
+    <?php
+        }
+    }?>
+</head>
     <body>
         <div id="wrapper">
             <div id="top">
