@@ -24,3 +24,7 @@
                     </ul>
                 </div>
                 <div id="main">
+                    <?php if(isset($_GET['msg'])) { ?>
+                    <div class="msg"><?php echo $_GET['msg']; ?></div>
+                    <?php
+                    }?>

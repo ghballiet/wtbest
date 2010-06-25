@@ -70,6 +70,11 @@
     -moz-column-rule: @rule;
 }
 
+.rotate(@deg:0deg) {
+    -webkit-transform: rotate(@deg);
+    -moz-transform: rotate(@deg);
+}
+
 #signup {
     float: left;
     padding: 1em;
@@ -163,7 +168,7 @@
     }
 }
 
-@slider-width: 800px;
+@slider-width: 100%;
 @slider-height: 450px;
 #slider {
 /*    display: inline-block;*/
@@ -173,7 +178,7 @@
     margin:30px 30px 60px 30px;
     background:#202834 url(loading.gif) no-repeat 50% 50%;
     .shadow(0px,5px,7px,rgba(0,0,0,.4));
-    border: solid 2px #333;
+    border: solid 10px #fff;
     
     img {
         position: absolute;

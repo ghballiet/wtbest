@@ -1,7 +1,7 @@
 ﻿<?php $_POST['title'] = 'Sponsors'; ?>	
 <?php require('../include/header.php'); ?>
 <!-- Add Sponsor Logo and Link Table -->
-    <form>
+    <div class="box">
 	    <h2>Add Sponsor</h2>
 		<table>
 			<tr>
@@ -18,10 +18,10 @@
 		<table>
 		  <tr><td><input type="submit" /></td></tr>
 		</table>
-		</form>
+		</div>
 	
 <!-- Manage existing Sponsor Logo/Links EDIT/DELTE -->	
-        <form>
+        <div class="box">
 		<h2>Manage Sponsors</h2>
 		<table>
 			<tr>
@@ -39,12 +39,12 @@
 					<td><?php echo $l[name]?></td>
 					<td><img src="../../include/img?i=<?php echo $l[id]?>" /></td>
 					<td><a href="<?php echo $l[url]?>"><?php echo $l[url]; ?></a></td>
-					<td><input type="submit" value="Edit" /></td>
+					<td><form method="post" action="edit/"><input type="hidden" name="id" id="id" value="<?php echo $l[id]; ?>" /><input type="submit" value="Edit" /></form></td>
 					<td><input type="submit" value="Delete" /></td>
 				</tr>
 			<?php
 			}
 			?>
 		</table>
-		</form>
+		</div>
 <?php require('../include/footer.php'); ?>

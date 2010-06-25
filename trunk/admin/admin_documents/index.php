@@ -1,7 +1,7 @@
 ﻿<?php $_POST['title']='Documents'; ?>
 <?php require('../include/header.php'); ?>
     <!--Table to add new document -->
-    <form>
+    <div class="box">
     <h2>Add New Document</h2>
     	<table>
     		<tr><th>Title</th><th>Description</th><th>Upload</th></tr>
@@ -16,12 +16,11 @@
     	<table>
     	   <tr><td><input type="submit" value="Submit" /></td></tr>
     	</table>
-    </form>
+    </div>
 	
     <!--Table to Manage existing documents -->	
-    <form method="post" action="edit/">
+    <div class="box">
         <h2>Manage Documents</h2>
-        <input type="hidden" name="docid" id="docid" />
     	<table>
     		<tr><th>Title</th><th>Description</th><th>File</th><th></th><th></th></tr>
     			<?php
@@ -29,15 +28,15 @@
                     $list = db_query($q);
                     foreach($list as $l) { ?>
     					<tr>
-    						<td><?php echo $l[title]?></td>
-    						<td><?php echo $l[description]?></td>
-    						<td><a href="../../include/doc/?i=<?php echo $l['id']?>">View</a></td>
-    						<td><input type="submit" value="Edit" onclick="docid.value='<?php echo $l[id]; ?>';"/></td>
-    						<td><input type="submit" value="Delete" /></td>
+    						<td><?php echo $l[title]; ?></td>
+    						<td><?php echo $l[description]; ?></td>
+    						<td><a href="../../include/doc/?i=<?php echo $l['id']; ?>">View</a></td>
+    						<td><form method="post" action="edit/"><input type="hidden" name="docid" id="docid" value="<?php echo $l['id']; ?>"/><input type="submit" value="Edit" /></form></td>
+    						<td><form method="post" action="delete/"><input type="hidden" name="docid" id="docid" value="<?php echo $l['id']; ?>"/><input type="submit" value="Delete" /></form></td>
     					</tr>
     			<?php 
     			}
     			?>
     	</table>
-    </form>
+    </div>
 <?php require('../include/footer.php'); ?>

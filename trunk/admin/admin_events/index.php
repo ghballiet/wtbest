@@ -1,7 +1,7 @@
 ﻿<?php $_POST['title'] = 'Events'; ?>
 <?php require('../include/header.php'); ?>
     <!-- Add New Event Table -->        
-		<form name="input" method="get">
+		<div class="box">
 			<h2>Add New Event</h2>
 			<table>
 				<tr>
@@ -20,11 +20,10 @@
 			<table>
 			 <tr><td><input type="submit" /></td></tr>
 			</table>
-		</form>
+		</div>
 
         <!-- Manage Events Table -->
-		<form name="events" method="post" action="edit/">
-		    <input type="hidden" id="eventid" name="eventid" />
+		<div class="box">
 			<h2>Manage Events</h2>
 			<table class="list">
 				<tr>
@@ -39,15 +38,15 @@
                     $list = db_query($q);
                     foreach($list as $l) {?>
 						<tr>
-							<td><?php echo $l[date]?></td>
-							<td><?php echo $l[time]?></td>
+							<td><?php $format="l F j"; echo date_format(date_create($l['date']),$format); ?></td>
+							<td><?php $format="h:iA"; echo date_format(date_create($l['time']),$format); ?></td>
 							<td><?php echo $l[description]?></td>
-							<td><input type="submit" value="Edit" onclick="eventid.value='<?php echo $l[id]; ?>';"/></td>
-							<td><input type="submit" value="Delete" /></td>
+							<td><form method="post" action="edit/"><input type="hidden" name="eventid" id="eventid" value="<?php echo $l[id]; ?>"><input type="submit" value="Edit"/></form></td>
+							<td><form method="post" action="delete/"><input type="hidden" name="eventid" id="eventid" value="<?php echo $l[id]; ?>"><input type="submit" value="Delete" /></form></td>
 						</tr>
 					<?php
 					}
 					?>
 			</table>
-		</form>
+		</div>
 <?php require('../include/footer.php'); ?>
