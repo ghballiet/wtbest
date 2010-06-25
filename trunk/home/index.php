@@ -26,7 +26,8 @@
                                 <tr>
                                     <td colspan="2"><input type="text" name="org_name" id="org_name" /></td>
                                 </tr>
-                            </table><table>
+                            </table>
+							<table>
                                 <tr><th>Type of Organization</th><th>ZIP Code</th><th></th></tr>
                                 <tr>
                                     <td>
