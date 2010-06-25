@@ -2,12 +2,14 @@
 <?php $_POST['extradirs'] = '../'; ?>
 <?php $id = $_POST['docid']; ?>
 <?php require('../../include/header.php'); ?>
-<form>
+<div class="box">
+<form method="post" action="../update/">
     <?php
     $q = "select * from documents d where d.id='" . $id . "';";
     $list = db_query($q);
     foreach($list as $l) {?>
     <p>
+        <input type="hidden" name="id" id="id" value="<?php echo $l[id]; ?>" />
         <label for="title">Title</label>
         <input type="text" id="title" name="title" value="<?php echo $l[title]; ?>" />
     </p>
@@ -24,4 +26,5 @@
     }
     ?>
 </form>
+</div>
 <?php require('../../include/footer.php'); ?>

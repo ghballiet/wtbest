@@ -2,11 +2,13 @@
 <?php $_POST['extradirs'] = '../'; ?>
 <?php $id = $_POST['eventid']; ?>
 <?php require('../../include/header.php'); ?>
-<form>
+<div class="box">
+<form method="post" action="../update/">
     <?php
     $q = "select * from events e where e.id='" . $id . "';";
     $list = db_query($q);
     foreach($list as $l) {?>
+    <input type="hidden" name="id" id="id" value="<?php echo $l[id]; ?>" />
     <p>
         <label for="date">Date</label>
         <input type="text" id="date" name="date" value="<?php echo $l[date]; ?>" />
@@ -20,12 +22,9 @@
         <textarea id="description" name="description"><?php echo $l[description]; ?></textarea>
     </p>
     <p><input type="submit" value="Save Changes"></p>
-	<?php
-		db_udpdate("UPDATE events SET date=e.date, time=e.time, description=description
-					WHERE id=$1");
-	?>
     <?php   
     }
     ?>
 </form>
+</div>
 <?php require('../../include/footer.php'); ?>

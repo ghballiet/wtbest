@@ -30,11 +30,9 @@ a {
   color: #555555;
   display: block;
   padding: 0.75em;
+  font-weight: bold;
 }
-#nav ul li a:hover {
-  color: #990000;
-  background: #eeeeee;
-}
+#nav ul li a:hover { color: #990000; }
 #main {
   float: right;
   width: 80%;
@@ -110,7 +108,7 @@ a {
   color: #333333;
 }
 #main h2:first-child { margin-top: 0px; }
-#main form {
+#main div.box {
   margin: 0px;
   padding: 0px;
   margin-bottom: 3em;
@@ -196,50 +194,20 @@ a {
   min-height: 15em;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.05)), to(transparent), color-stop(0.03, transparent));
 }
-#main p input[type="submit"] {
-  padding: 0.5em 1em;
-  border: solid 1px transparent;
-  background-color: #cc0000;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#cc0000), to(#990000));
-  background: -moz-linear-gradient(top, #cc0000, #990000);
-  color: #ffffff;
-  font-size: 1em;
-  font-family: helvetica, arial, verdana, sans-serif;
-  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
-  -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
-  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
-  -webkit-border-radius: 0.25em;
-  -moz-border-radius: 0.25em;
-  border-radius: 0.25em;
-  margin-left: 8em;
-}
 #main p input[type="file"] { margin-bottom: 1em; }
-#main form:first-child table tr:last-child td { text-align: right; }
-#main form:first-child table tr:last-child td input[type="submit"] {
-  border: solid 1px transparent;
-  font-family: helvetica, arial, verdana, sans-serif;
-  padding: 0.5em 0.75em;
-  background-color: #444444;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#444444), to(#222222));
-  background: -moz-linear-gradient(top, #444444, #222222);
-  font-size: 1em;
-  color: #ffffff;
+#main .box:first-child table tr:last-child td { text-align: right; }
+div.msg {
+  padding: 1em;
+  margin: 28px 0px;
+  margin-top: 14px;
+  font-size: 1.25em;
+  border: solid 1px #666666;
   -webkit-border-radius: 0.25em;
   -moz-border-radius: 0.25em;
   border-radius: 0.25em;
-}
-#main form:last-child table input[type="submit"] {
-  border: solid 1px transparent;
-  font-family: helvetica, arial, verdana, sans-serif;
-  padding: 0.5em 0.75em;
   background-color: #444444;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#444444), to(#222222));
   background: -moz-linear-gradient(top, #444444, #222222);
-  font-size: 1em;
   color: #ffffff;
-  -webkit-border-radius: 0.25em;
-  -moz-border-radius: 0.25em;
-  border-radius: 0.25em;
-  font-size: 10.5px;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
 }

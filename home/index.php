@@ -45,11 +45,16 @@
                                 <tr>
                                     <td>
                                         <select id="org_type" name="org_type">
-                                            <option value="">--------------------</option>
-                                            <option value="jrhigh">Junior High School</option>
-                                            <option value="srhigh">High School</option>
-                                            <option value="sponsor">Sponsor</option>
-                                            <option value="other">Other</option>
+                                            <option value=""></option>
+                                            <?php
+                                            $q = "select * from org_type o order by o.name;";
+                                            $list = db_query($q);
+                                            foreach($list as $l) {
+                                            ?>
+                                            <option value="<?php echo $l[id]; ?>"><?php echo $l[name]; ?></option>
+                                            <?php
+                                            }
+                                            ?>
                                         </select>
                                     </td>
                                     <td style="padding-right: 0px"><input type="text" name="org_zip" id="org_zip" maxlength="5" /></td>
