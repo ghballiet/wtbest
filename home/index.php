@@ -77,7 +77,15 @@
                     <script type="text/javascript">
                     $(window).load(function() {
                        $('#slider').nivoSlider({
-                           effect:'fade',                          
+                           effect:'fade',
+                           beforeChange: function() {
+                             $('.nivo-caption').fadeOut('slow');
+                           },
+                           afterChange: function() {
+                             $('.nivo-caption').fadeIn('slow');
+                           },
+                           captionOpacity:1,
+                           pauseTime:5000,
                        });
                     });
                     </script>
