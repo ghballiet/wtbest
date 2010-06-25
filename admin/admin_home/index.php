@@ -6,6 +6,15 @@
             <tr><th>Organization</th><th>First Name</th><th>Last Name</th></tr>
             <tr>
                 <td><input type="text" name="org_name" id="org_name" /></td>
+				<td>
+                    <select id="org_type" name="org_type">
+						<option value="">--------------------</option>
+						<option value="jrhigh">Junior High School</option>
+						<option value="srhigh">High School</option>
+						<option value="sponsor">Sponsor</option>
+						<option value="other">Other</option>
+                    </select>
+                 </td>
                 <td><input type="text" name="first_name" id="first_name" /></td>
                 <td><input type="text" name="last_name" id="last_name" /></td>
             </tr>
@@ -17,11 +26,7 @@
                 <td><input type="text" name="zip" id="zip" maxlength="5" /></td>
             </tr>
         </table>
-        <table><tr><td><input type="submit" /></td></tr></table>
-			<?php
-				db_udpdate("INSERT INTO mailing_list (first_name, last_name, email, org_name, zip, org_type)
-						VALUES ('$_POST[first_name]','$_POST[last_name]','$_POST[email]','$_POST[org_name]','$_POST[zip]','$_POST[org_type]')";
-			?>
+        <table><tr><td><input type="submit" value="Submit"/></td></tr></table>
     </form>
     
     <form>
@@ -34,11 +39,14 @@
             foreach ($list as $l) {
             ?>
             <tr>
-                <td><? echo $l[org_name]; ?></td>
-                <td><? echo $l[first_name]; ?></td>
-                <td><? echo $l[last_name]; ?></td>
-                <td><? echo $l[email]; ?></td>
-                <td><? echo $l[zip]; ?></td>
+                <td><?php echo $l[org_name]; ?></td>
+				<td><?php echo $l[org_type]; ?></td>
+                <td><?php echo $l[first_name]; ?></td>
+                <td><?php echo $l[last_name]; ?></td>
+                <td><?php echo $l[email]; ?></td>
+                <td><?php echo $l[zip]; ?></td>
+				<td><input type="submit" value="Edit" onclick="docid.value='<?php echo $l[id]; ?>';"/></td>
+    			<td><input type="submit" value="Delete" /></td>
             </tr>
             <?php
             }
