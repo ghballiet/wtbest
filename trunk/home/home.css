@@ -135,6 +135,7 @@
   border: solid 1px #cdc89b;
   width: auto;
   font-size: 1.15em;
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.95);
 }
 #slider .nivo-caption {
   -webkit-transform: rotate(1.25deg);

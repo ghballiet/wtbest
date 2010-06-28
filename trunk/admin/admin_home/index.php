@@ -3,26 +3,36 @@
     <div class="box">
         <h2>Add Recipient</h2>
         <table>
-            <tr><th>Organization</th><th>First Name</th><th>Last Name</th></tr>
+            <tr><th>First Name</th><th>Last Name</th></tr>
             <tr>
-                <td><input type="text" name="org_name" id="org_name" /></td>
-				<td>
-                    <select id="org_type" name="org_type">
-						<option value="">--------------------</option>
-						<option value="jrhigh">Junior High School</option>
-						<option value="srhigh">High School</option>
-						<option value="sponsor">Sponsor</option>
-						<option value="other">Other</option>
-                    </select>
-                 </td>
                 <td><input type="text" name="first_name" id="first_name" /></td>
                 <td><input type="text" name="last_name" id="last_name" /></td>
             </tr>
         </table>
         <table>
-            <tr><th>Email</th><th>ZIP</th></tr>
+            <tr><th>Email</th></tr>
+            <tr><td><input type="text" name="email" id="email" /></td></tr>
+        </table>
+        <table>
+            <tr><th>Organization or School Name</th></tr>
+            <tr><td><input type="text" name="org_name" id="org_name" /></td></tr>
+        </table>
+        <table>
+            <tr><th>Organization Type</th><th>ZIP</th></tr>
             <tr>
-                <td><input type="text" name="email" id="email" /></td>
+    			<td>
+                    <select id="org_type" name="org_type">
+                    <option value=""></option>
+                    <?php
+                    $q = "select * from org_type o order by o.name;";
+                    $list = db_query($q);
+                    foreach($list as $l) { ?>
+                    <option value="<?php echo $l[id]; ?>"><?php echo $l[name]; ?></option>
+                    <?php
+                    }
+                    ?>
+                    </select>
+                </td>
                 <td><input type="text" name="zip" id="zip" maxlength="5" /></td>
             </tr>
         </table>
@@ -66,15 +76,14 @@
     <div class="box">
         <h2>Organization Types</h2>
         <table>
-            <tr><th>Type</th><th>Name</th><th></th><th></th></tr>
+            <tr><th>Type</th><th></th><th></th></tr>
             <?php
-            $q = 'select distinct(m.org_name), o.name from mailing_list m, org_type o where m.org_type = o.id;';
+            $q = 'select * from org_type o order by o.name;';
             $list = db_query($q);
             foreach($list as $l) {
             ?>
             <tr>
                 <td><? echo $l[name]; ?></td>
-                <td><? echo $l[org_name]; ?></td>
                 <td><form method="post" action="edit/"><input type="hidden" name="id" id="id" value="<?php echo $l[id]; ?>" /><input type="submit" value="Edit" /></form></td>
                 <td><form method="post" action="delete/"><input type="hidden" name="id" id="id" value="<?php echo $l[id]; ?>" /><input type="submit" value="Delete" /></form></td>
             </tr>
