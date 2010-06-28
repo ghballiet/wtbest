@@ -211,3 +211,21 @@ div.msg {
   color: #ffffff;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
 }
+select { width: 100%; }
+div.box:first-child table {
+  width: 100% !important;
+  margin: 0px !important;
+}
+div.box:first-child td {
+  padding: 0px !important;
+  margin: 0px !important;
+  padding: 0.5em !important;
+}
+div.box:first-child th {
+  padding: 0px !important;
+  margin: 0px !important;
+  padding: 0.5em !important;
+}
+div.box:first-child input { width: auto !important; }
+div.box:first-child input[type="text"] { width: 95% !important; }
+div.box:first-child select { width: 95% !important; }
