@@ -1,3 +1,7 @@
+<?php $SECRET_KEY="9RatrE9ded9he8"; ?>
+<?php if(!isset($_COOKIE[$SECRET_KEY])) {
+    header('Location: ../..'); 
+}?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?php require_once('database.php'); ?>
 <?php $link=db_connect(); ?>
@@ -21,6 +25,7 @@
                         <li><a href="<?php echo $_POST['extradirs']; ?>../admin_events/">Events</a></li>
                         <li><a href="<?php echo $_POST['extradirs']; ?>../admin_sponsors/">Sponsors</a></li>
                         <li><a href="<?php echo $_POST['extradirs']; ?>../admin_documents/">Documents</a></li>
+                        <li><a href="<?php echo $_POST['extradirs']; ?>../logout/">Logout</a></li>
                     </ul>
                 </div>
                 <div id="main">
