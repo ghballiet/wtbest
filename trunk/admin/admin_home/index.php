@@ -1,4 +1,4 @@
-<?php $_POST['title'] = 'Email List'; ?>	
+<?php $_POST['title'] = 'Email List'; ?>
 <?php require('../include/header.php'); ?>
     <div class="box">
         <h2>Add Recipient</h2>

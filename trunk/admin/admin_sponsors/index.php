@@ -1,4 +1,4 @@
-﻿<?php $_POST['title'] = 'Sponsors'; ?>	
+﻿<?php $_POST['title'] = 'Sponsors'; ?>
 <?php require('../include/header.php'); ?>
 <!-- Add Sponsor Logo and Link Table -->
     <div class="box">
