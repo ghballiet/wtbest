@@ -5,16 +5,16 @@
 			<h2>Add New Event</h2>
 			<table>
 				<tr>
-					<th>Date <span>YYYY-MM-DD</span></th>
-					<th>Time <span>HH:MM</span></th>
+					<th>Date <span>YYYY-MM-DD</span> <span id="dt_chars">10/10</span></th>
+					<th>Time <span>HH:MM</span> <span id="tm_chars">5/5</span></th>
 				</tr>
 				<tr>
-					<td><input type="text" name="e.date" /></td>
-					<td><input type="text" name="e.time" /></td>
+					<td><input type="text" name="date" id="date" /></td>
+					<td><input type="text" name="time" id="time" /></td>
 				</tr>
 			</table>
 			<table>
-			    <tr><th>Description</th></tr>
+			    <tr><th>Description  <span id="ds_chars">1000/1000</span></th></tr>
 				<tr><td><textarea name="description" id="description"></textarea></td></tr>
 			</table>
 			<table>
@@ -49,4 +49,9 @@
 					?>
 			</table>
 		</div>
+		<script type="text/javascript">
+		ccount('date','dt_chars',10);
+		ccount('time','tm_chars',5);
+		ccount('description','ds_chars',1000);
+		</script>
 <?php require('../include/footer.php'); ?>

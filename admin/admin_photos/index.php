@@ -4,7 +4,7 @@
 <div class="box">
 	<h2>Upload a Photo</h2>
 	<table>
-	   <tr><th>Photo</th><th>Caption</th></tr>
+	   <tr><th>Photo</th><th>Caption <span id="cp_chars">500/500</span></th></tr>
 	   <tr>
 	       <td><input type="file" id="photo" name="photo" /></td>
 	       <td><input type="text" id="caption" name="caption" /></td>
@@ -35,4 +35,7 @@
 	    ?>
 	</table>
 </div>
+<script type="text/javascript">
+ccount('caption','cp_chars',500);
+</script>
 <?php require('../include/footer.php'); ?>

@@ -5,9 +5,9 @@
 	    <h2>Add Sponsor</h2>
 		<table>
 			<tr>
-			    <th>Name</th>
+			    <th>Name <span id="nm_chars">500/500</span></th>
+			    <th>URL <span id="ur_chars">500/500</span></th>
 			    <th>Logo</th>
-			    <th>URL</th>
 			</tr>
 			<tr>
 			    <td><input type="text" id="name" name="name" /></td>
@@ -47,4 +47,10 @@
 			?>
 		</table>
 		</div>
+		<script type="text/javascript">
+		$(document).ready(function() {
+		   ccount('name','nm_chars',500);
+		   ccount('url','ur_chars',500);
+		});
+		</script>
 <?php require('../include/footer.php'); ?>

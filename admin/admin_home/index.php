@@ -3,18 +3,18 @@
     <div class="box">
         <h2>Add Recipient</h2>
         <table>
-            <tr><th>First Name</th><th>Last Name</th></tr>
+            <tr><th>First Name <span id="fn_chars">255/255</span></th><th>Last Name <span id="ln_chars">255/255</span></th></tr>
             <tr>
                 <td><input type="text" name="first_name" id="first_name" /></td>
                 <td><input type="text" name="last_name" id="last_name" /></td>
             </tr>
         </table>
         <table>
-            <tr><th>Email</th></tr>
+            <tr><th>Email <span id="em_chars">500/500</span></th></tr>
             <tr><td><input type="text" name="email" id="email" /></td></tr>
         </table>
         <table>
-            <tr><th>Organization or School Name</th><th>Organization Type</th><th class="zip">ZIP</th></tr>
+            <tr><th>Organization or School Name <span id="og_chars">500/500</span></th><th>Organization Type</th><th class="zip">ZIP  <span id="zi_chars">5/5</span></th></tr>
             <tr>
                 <td><input type="text" name="org_name" id="org_name" /></td>
                 <td>
@@ -30,19 +30,11 @@
                     ?>
                     </select>
                 </td>
-                <td><input type="text" name="zip" id="zip" class="zip" maxlength="5" /></td>
+                <td><input type="text" name="zip" id="zip" class="zip" /></td>
             </tr>
         </table>
         <table><tr><td><input type="submit" value="Submit"/></td></tr></table>
     </div>
-    
-    <script type="text/javascript">
-    function test_post(id) {
-        $.post('add/index.php', {id: id}, function(data) {
-            $('#alert').fadeIn(200).html(data).delay(1750).fadeOut(200);
-        });
-    }
-    </script>
     
     <div class="box">
         <h2>Current List</h2>
@@ -72,8 +64,8 @@
     <div class="box">
         <h2>Add Organization Type</h2>
         <table>
-            <tr><th>Type</th><th>Name</th></tr>
-            <tr><td><input type="text" id="type" name="type" /></td><td><input type="text" id="name" name="name" /></td></tr>
+            <tr><th>Type <span id="tp_chars">500/500</span></th></tr>
+            <tr><td><input type="text" id="type" name="type" /></td></tr>
         </table>
         <table><tr><td style="text-align: right"><input type="submit" /></td></tr></table>
     </div>
@@ -97,4 +89,21 @@
             ?>
         </table>
     </div>
+    
+    <script type="text/javascript">
+    function test_post(id) {
+        $.post('add/index.php', {id: id}, function(data) {
+            $('#alert').fadeIn(200).html(data).delay(1750).fadeOut(200);
+        });
+    }
+    
+    $(document).ready(function() {
+        ccount('first_name','fn_chars',255);
+        ccount('last_name','ln_chars',255);
+        ccount('email','em_chars',500);
+        ccount('org_name','og_chars',500);
+        ccount('zip','zi_chars',5);
+        ccount('type','tp_chars',500);
+    });
+    </script>
 <?php require('../include/footer.php'); ?>
