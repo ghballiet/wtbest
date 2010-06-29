@@ -10,6 +10,7 @@ if(!isset($_COOKIE[$SECRET_KEY])) {
     <head>
         <link rel="stylesheet" type="text/css" href="<?php echo $_POST['extradirs']; ?>../../include/css/reset.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo $_POST['extradirs']; ?>../include/master.css" />
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
         <title><?php echo $_POST['title']; ?> | West Texas BEST Administration</title>
     </head>
     <body>
@@ -34,3 +35,4 @@ if(!isset($_COOKIE[$SECRET_KEY])) {
                     <div class="msg"><?php echo $_GET['msg']; ?></div>
                     <?php
                     }?>
+                    <div id="alert"></div>

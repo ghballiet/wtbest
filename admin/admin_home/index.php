@@ -14,13 +14,10 @@
             <tr><td><input type="text" name="email" id="email" /></td></tr>
         </table>
         <table>
-            <tr><th>Organization or School Name</th></tr>
-            <tr><td><input type="text" name="org_name" id="org_name" /></td></tr>
-        </table>
-        <table>
-            <tr><th>Organization Type</th><th>ZIP</th></tr>
+            <tr><th>Organization or School Name</th><th>Organization Type</th><th class="zip">ZIP</th></tr>
             <tr>
-    			<td>
+                <td><input type="text" name="org_name" id="org_name" /></td>
+                <td>
                     <select id="org_type" name="org_type">
                     <option value=""></option>
                     <?php
@@ -33,29 +30,37 @@
                     ?>
                     </select>
                 </td>
-                <td><input type="text" name="zip" id="zip" maxlength="5" /></td>
+                <td><input type="text" name="zip" id="zip" class="zip" maxlength="5" /></td>
             </tr>
         </table>
         <table><tr><td><input type="submit" value="Submit"/></td></tr></table>
     </div>
     
+    <script type="text/javascript">
+    function test_post(id) {
+        $.post('add/index.php', {id: id}, function(data) {
+            $('#alert').fadeIn(200).html(data).delay(1750).fadeOut(200);
+        });
+    }
+    </script>
+    
     <div class="box">
         <h2>Current List</h2>
         <table>
-            <tr><th>Organization</th><th>First Name</th><th>Last Name</th><th>Email</th><th>ZIP</th></tr>
+            <tr><th>Organization</th><th>Type</th><th>First Name</th><th>Last Name</th><th>Email</th><th>ZIP</th></tr>
             <?php
-            $q = 'select * from mailing_list m order by m.org_name, m.first_name, m.last_name, m.email, m.zip;';
+            $q = 'select m.id, m.org_name, o.name, m.first_name, m.last_name, m.email, m.zip from mailing_list m, org_type o where o.id = m.org_type order by m.org_name, m.first_name, m.last_name, m.email, m.zip;';
             $list = db_query($q);
             foreach ($list as $l) {
             ?>
             <tr>
                 <td><?php echo $l[org_name]; ?></td>
-				<td><?php echo $l[org_type]; ?></td>
+				<td><?php echo $l[name]; ?></td>
                 <td><?php echo $l[first_name]; ?></td>
                 <td><?php echo $l[last_name]; ?></td>
                 <td><?php echo $l[email]; ?></td>
                 <td><?php echo $l[zip]; ?></td>
-				<td><input type="submit" value="Edit" onclick="docid.value='<?php echo $l[id]; ?>';"/></td>
+				<td><input type="submit" value="Edit" /></td>
     			<td><input type="submit" value="Delete" /></td>
             </tr>
             <?php

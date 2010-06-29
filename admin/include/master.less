@@ -50,9 +50,11 @@ a {
     text-decoration: none;
 }
 
+@nav-width: 10em;
+
 #nav {
     float: left;
-    width: 14%;
+    width: @nav-width;
     
     ul li a {
         color: #555;
@@ -68,68 +70,9 @@ a {
 
 #main {
     float: right;
-    width: 80%;
+    max-width: @wrapper-width - @nav-width;
 /*    border-left: solid 1px #ccc;*/
-    padding-left: 2em;
     
-    table {
-        margin: 0px;
-        border-collapse: collapse;
-        padding: 0px;
-        font-size: @font-size;
-        width: 100%;
-
-        th, td {
-            text-align: left;
-            padding: .5 * @font-size;
-        }
-
-        th {
-            letter-spacing: -0.06em;
-            text-transform: uppercase;
-            font-size: .8em;
-            
-            span {
-                font-size: .9em;
-                color: #666;
-                display: inline-block;
-                margin-left: 1em;
-            }
-        }
-        
-        td {
-            line-height: 1.4em;
-            font-size: .85 * @font-size;
-            
-            img {
-                max-width: 4em;
-                max-height: 4em;
-            }
-            
-            input[type="text"], textarea {
-                border: solid 1px #ccc;
-                padding: .5em;
-                font-size: .9 * @font-size;
-                font-family: @font-stack;
-                width: 95%;
-                margin: 0px;
-                color: #999;
-                letter-spacing: normal;
-                background-color: #fff;
-            }
-            
-            textarea {
-                width: 97.5%;
-                min-height: 8em;
-                line-height: 1.4em;
-            }
-            
-            input[type="text"]:focus, textarea:focus {
-                border: solid 1px #c00;
-                color: #333;
-            }
-        }
-    }
     
     h2:first-child {
         margin-top: 0px;
@@ -145,10 +88,74 @@ a {
         .shadow(0px,2px,3px,rgba(0,0,0,.3));
         .gradient(transparent,rgba(0,0,0,.02));
     }
+}
+
+#main table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
     
-/*    tr:nth-child(2n-1) td {
-        background-color: #eee;
-    }*/
+    td, th {
+        text-align: left;
+        padding: @font-size;
+        padding-top: 0px;
+        vertical-align: middle;
+    }
+    
+    tr td:first-child, tr th:first-child {
+        padding-left: 0px;
+    }
+    
+    td {
+        font-size: .85em;
+    }
+    
+    td img {
+        max-height: 1.5em;
+    }
+    
+    th {
+        text-transform: uppercase;
+        color: #999;
+        font-size: .8 * @font-size;
+        padding-bottom: .25 * @font-size;
+    }
+    
+    td input[type="text"], td textarea {
+        width: 100%;
+        border: solid 1px #ccc;
+        font-size: @font-size;
+        padding: .25em;
+        font-family: @font-stack;
+        color: #999;
+        .shadow(inset,0px,2px,rgba(0,0,0,.075));
+        .round(.25em);
+    }
+    
+    th span {
+        color: #ddd;
+        display: inline-block;
+        margin-left: 1em;
+    }
+    
+    td input[type="text"]:focus, td textarea:focus {
+        border: solid 1px #c00;
+        color: #222;
+    }
+    
+    textarea {
+        min-height: 8em;
+        line-height: 1.4em;
+    }
+    
+    .zip {
+        width: 3.5 * @font-size;
+    }
+    
+    #zip {
+        text-align: center;
+    }
 }
 
 #footer {
@@ -228,10 +235,6 @@ a {
     margin-bottom: 1em;
 }
 
-#main .box:first-child table tr:last-child td {
-    text-align: right;
-}
-
 /*#main .box:first-child table tr:last-child td input[type="submit"] {
     border: solid 1px transparent;
     font-family: @font-stack;
@@ -267,25 +270,23 @@ div.msg {
 
 select {
     width: 100%;
+    margin: 0px;
 }
 
-div.box:first-child {
-    table {
-        width: 100% !important;
-        margin: 0px !important;
-    }
-    
-    td, th {
-        padding: 0px !important;
-        margin: 0px !important;
-        padding: .5em !important;
-    }
-    
-    input {
-        width: auto !important;
-    }
-    
-    input[type="text"], select {
-        width: 95% !important;
-    }
+#alert {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: .75em 0px;
+    font-weight: bold;
+    font-size: 1.75em;
+    z-index: 1;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background: #8ae234;
+    .shadow(0px,5px,7px,rgba(0,0,0,.4));
+    color: #4e9a06;
+    width: 100%;
+    text-align: center;
 }
