@@ -13,7 +13,7 @@ h2 {
   margin: 0.5em 0px;
 }
 #wrapper {
-  width: 70em;
+  width: 69em;
   margin: 2em auto;
 }
 .clearfix { clear: both; }
@@ -35,7 +35,7 @@ a {
 #nav ul li a:hover { color: #990000; }
 #main {
   float: right;
-  max-width: 60em;
+  width: 59em;
 }
 #main h2:first-child { margin-top: 0px; }
 #main div.box {
@@ -64,13 +64,13 @@ a {
   text-align: left;
   padding: 14px;
   padding-top: 0px;
-  vertical-align: middle;
+  vertical-align: top;
 }
 #main table th {
   text-align: left;
   padding: 14px;
   padding-top: 0px;
-  vertical-align: middle;
+  vertical-align: top;
 }
 #main table tr td:first-child { padding-left: 0px; }
 #main table tr th:first-child { padding-left: 0px; }
@@ -80,7 +80,7 @@ a {
   text-transform: uppercase;
   color: #999999;
   font-size: 11.2px;
-  padding-bottom: 3.5px;
+  padding-bottom: 4.9px;
 }
 #main table td input[type="text"] {
   width: 100%;
@@ -237,4 +237,25 @@ select {
   color: #4e9a06;
   width: 100%;
   text-align: center;
+}
+#top a {
+  display: inline-block;
+  padding: 0.5em 1.1em;
+  text-transform: uppercase;
+  margin: 0.5em;
+  position: absolute;
+  margin-left: 815px;
+  margin-top: 13px;
+  font-size: 0.75em;
+  background-color: #eeeeee;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#aaaaaa));
+  background: -moz-linear-gradient(top, #eeeeee, #aaaaaa);
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  border: solid 1px #aaaaaa;
+}
+.bigpic {
+  max-height: 100% !important;
+  max-width: 100px;
 }
