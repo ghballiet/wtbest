@@ -3,6 +3,16 @@
 <!-- Add New Event Table -->        
 <div class="box">
 	<h2>Upload a Photo</h2>
+	<table>
+	   <tr><th>Photo</th><th>Caption</th></tr>
+	   <tr>
+	       <td><input type="file" id="photo" name="photo" /></td>
+	       <td><input type="text" id="caption" name="caption" /></td>
+	   </tr>
+	</table>
+	<table>
+	   <tr><td><input type="submit" /></td></tr>
+	</table>
 </div>
 
 <!-- Manage Events Table -->
