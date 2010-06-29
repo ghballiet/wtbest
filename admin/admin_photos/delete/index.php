@@ -2,7 +2,7 @@
 <?php $link=db_connect(); ?>
 
 	<?php
-		db_update("DELETE FROM events where id='" . $_POST['id'] . "';");
+		db_udpdate("DELETE FROM photos where id='" . $_POST['id'] . "';");
 	?>
 
 <?php db_disconnect($link); ?>
