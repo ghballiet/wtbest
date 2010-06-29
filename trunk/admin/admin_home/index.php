@@ -82,7 +82,7 @@
             <tr>
                 <td><? echo $l[name]; ?></td>
                 <td><form method="post" action="edit/"><input type="hidden" name="id" id="id" value="<?php echo $l[id]; ?>" /><input type="submit" value="Edit" /></form></td>
-                <td><form method="post" action="delete/"><input type="hidden" name="id" id="id" value="<?php echo $l[id]; ?>" /><input type="submit" value="Delete" /></form></td>
+                <td><input type="hidden" name="id" id="id" value="<?php echo $l[id]; ?>" /><input type="submit" value="Delete" /></td>
             </tr>
             <?php
             }

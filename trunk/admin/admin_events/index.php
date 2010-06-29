@@ -2,6 +2,7 @@
 <?php require('../include/header.php'); ?>
     <!-- Add New Event Table -->        
 		<div class="box">
+		    <form id="new">
 			<h2>Add New Event</h2>
 			<table>
 				<tr>
@@ -18,14 +19,15 @@
 				<tr><td><textarea name="description" id="description"></textarea></td></tr>
 			</table>
 			<table>
-			 <tr><td><input type="submit" /></td></tr>
+			 <tr><td><input type="button" onclick='add()' value='Submit' /></td></tr>
 			</table>
+			</form>
 		</div>
 
         <!-- Manage Events Table -->
 		<div class="box">
 			<h2>Manage Events</h2>
-			<table class="list">
+			<table id="list">
 				<tr>
 					<th>Date</th>
 					<th>Time</th>
@@ -37,12 +39,12 @@
                     $q = 'select * from events e order by e.date, e.time;';
                     $list = db_query($q);
                     foreach($list as $l) {?>
-						<tr>
+						<tr id="r<? echo $l[id]; ?>">
 							<td><?php $format="l F j"; echo date_format(date_create($l['date']),$format); ?></td>
 							<td><?php $format="h:iA"; echo date_format(date_create($l['time']),$format); ?></td>
 							<td><?php echo $l[description]?></td>
 							<td><form method="post" action="edit/"><input type="hidden" name="eventid" id="eventid" value="<?php echo $l[id]; ?>"><input type="submit" value="Edit"/></form></td>
-							<td><form method="post" action="delete/"><input type="hidden" name="eventid" id="eventid" value="<?php echo $l[id]; ?>"><input type="submit" value="Delete" /></form></td>
+							<td><input type="submit" value="Delete" onclick="del('<? echo $l[id]; ?>');"/></td>
 						</tr>
 					<?php
 					}
