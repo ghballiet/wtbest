@@ -18,6 +18,7 @@ if(!isset($_COOKIE[$SECRET_KEY])) {
             <div id="top">
                 <h1><?php echo $_POST['title']; ?></h1>
                 <img src="<?php echo $_POST['extradirs']; ?>../../include/img/logo_cropped.png" />
+                <a href="<?php echo $_POST['extradirs']; ?>../logout">Logout</a>
                 <div class="clearfix"></div>
             </div>
             <div id="content">
@@ -27,7 +28,7 @@ if(!isset($_COOKIE[$SECRET_KEY])) {
                         <li><a href="<?php echo $_POST['extradirs']; ?>../admin_events/">Events</a></li>
                         <li><a href="<?php echo $_POST['extradirs']; ?>../admin_sponsors/">Sponsors</a></li>
                         <li><a href="<?php echo $_POST['extradirs']; ?>../admin_documents/">Documents</a></li>
-                        <li><a href="<?php echo $_POST['extradirs']; ?>../logout/">Logout</a></li>
+                        <li><a href="<?php echo $_POST['extradirs']; ?>../admin_photos">Photos</a></li>
                     </ul>
                 </div>
                 <div id="main">

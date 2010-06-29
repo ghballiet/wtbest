@@ -1,4 +1,4 @@
-@wrapper-width: 70em;
+@wrapper-width: 69em;
 @font-size: 14px;
 @font-stack: helvetica, arial, verdana, sans-serif;
 
@@ -70,7 +70,7 @@ a {
 
 #main {
     float: right;
-    max-width: @wrapper-width - @nav-width;
+    width: @wrapper-width - @nav-width;
 /*    border-left: solid 1px #ccc;*/
     
     
@@ -100,7 +100,7 @@ a {
         text-align: left;
         padding: @font-size;
         padding-top: 0px;
-        vertical-align: middle;
+        vertical-align: top;
     }
     
     tr td:first-child, tr th:first-child {
@@ -119,7 +119,7 @@ a {
         text-transform: uppercase;
         color: #999;
         font-size: .8 * @font-size;
-        padding-bottom: .25 * @font-size;
+        padding-bottom: .35 * @font-size;
     }
     
     td input[type="text"], td textarea {
@@ -289,4 +289,23 @@ select {
     color: #4e9a06;
     width: 100%;
     text-align: center;
+}
+
+#top a {
+    display: inline-block;
+    padding: .5em 1.1em;
+    text-transform: uppercase;
+    margin: .5em;
+    position: absolute;
+    margin-left: 815px;
+    margin-top: 13px;
+    font-size: .75em;
+    .gradient(#eee,#aaa);
+    .round(1em);
+    border: solid 1px #aaa;
+}
+
+.bigpic {
+    max-height: 100% !important;
+    max-width: 100px;
 }
