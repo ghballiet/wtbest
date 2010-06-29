@@ -1,8 +1,11 @@
-<?php require_once('../../include/database.php'); ?>
-<?php $link=db_connect(); ?>
-
-	<?php
-		db_update("DELETE FROM events where id='" . $_POST['id'] . "';");
-	?>
-
-<?php db_disconnect($link); ?>
+<?php
+require_once('../../include/database.php');
+$link=db_connect();
+$q = "SELECT * FROM events e WHERE e.id='" . $_POST['id'] . "';";
+$list = db_query($q);
+db_update("DELETE FROM events WHERE id='" . $_POST['id'] . "';");
+$date = date_format(date_create($list[1][date]),"l F j");
+$time = date_format(date_create($list[1][time]),"h:iA");
+echo "Deleted event on " . $date . " at " . $time . ".";
+db_disconnect($link);
+?>
