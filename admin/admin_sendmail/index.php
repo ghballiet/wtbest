@@ -19,6 +19,24 @@
                     </select>
 				</td></tr>
 				<tr>
+					<th>Additional Recipients</th>
+				</tr>
+				<tr>
+					<td>
+                    <select id="name" name="name">
+                    <option value=""></option>
+                    <?php
+                    $q = "select * from mailing_list l order by l.last_name;";
+                    $list = db_query($q);
+                    foreach($list as $l) { ?>
+                    <option value="<?php echo $l[id]; ?>"><?php echo $l[first_name]; echo " "; echo $l[last_name]; ?></option>
+                    <?php
+                    }
+                    ?>
+                    </select>
+					</td>
+				</tr>
+				<tr>
 					<th>Subject</th>
 				</tr>
 				<tr>
