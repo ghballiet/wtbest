@@ -25,7 +25,7 @@
 	    $list = db_query($q);
 	    foreach($list as $l) {?>
 	    <tr>
-	        <td><img src="../../home/photo.php?i=<?php echo $l[id]; ?>" class="bigpic" /></td>
+	        <td><a href="../../home/photo.php?i=<? echo $l[id]; ?>" target="_blank"><img src="../../home/photo.php?i=<?php echo $l[id]; ?>" class="bigpic" /></a></td>
 	        <td><?php echo $l[caption]; ?></td>
 	        <td><input type="submit" value="Edit" /></td>
 	        <td><input type="submit" value="Delete" /></td>

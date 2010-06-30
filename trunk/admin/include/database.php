@@ -28,6 +28,6 @@ function db_query($query) {
 }
 
 function db_update($query) {
-    mysql_query($query);
+    return mysql_query($query);
 }
 ?>
