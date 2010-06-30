@@ -20,6 +20,8 @@
 				</td></tr>
 				<tr>
 					<th>Subject</th>
+				</tr>
+				<tr>
 					<td><input type="text" name="subject" id="subject" /></td>
 				</tr>
 				<tr>
