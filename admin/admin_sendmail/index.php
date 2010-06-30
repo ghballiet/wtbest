@@ -1,7 +1,7 @@
 <?php $_POST['title'] = 'Send Email'; ?>
 <?php require('../include/header.php'); ?>
     <div class="box">
-        <h2>Add Recipient</h2>
+        <h2>Send Email</h2>
 		<form method="post" action="sendmail.php">
 			<table>
 				<tr><th>Organization Type to Email<th><tr>
