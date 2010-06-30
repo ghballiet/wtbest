@@ -2,6 +2,7 @@
 <?php require('../include/header.php'); ?>
     <div class="box">
         <h2>Add Recipient</h2>
+        <form id="new">
         <table>
             <tr><th>First Name <span id="fn_chars">255/255</span></th><th>Last Name <span id="ln_chars">255/255</span></th></tr>
             <tr>
@@ -33,30 +34,16 @@
                 <td><input type="text" name="zip" id="zip" class="zip" /></td>
             </tr>
         </table>
-        <table><tr><td><input type="submit" value="Submit"/></td></tr></table>
+        <table><tr><td><input type="button" value="Submit" onclick="add();"/></td></tr></table>
+        </form>
     </div>
     
     <div class="box">
         <h2>Current List</h2>
-        <table>
+        <table id="list">
             <tr><th>Organization</th><th>Type</th><th>First Name</th><th>Last Name</th><th>Email</th><th>ZIP</th></tr>
             <?php
-            $q = 'select m.id, m.org_name, o.name, m.first_name, m.last_name, m.email, m.zip from mailing_list m, org_type o where o.id = m.org_type order by m.org_name, m.first_name, m.last_name, m.email, m.zip;';
-            $list = db_query($q);
-            foreach ($list as $l) {
-            ?>
-            <tr>
-                <td><?php echo $l[org_name]; ?></td>
-				<td><?php echo $l[name]; ?></td>
-                <td><?php echo $l[first_name]; ?></td>
-                <td><?php echo $l[last_name]; ?></td>
-                <td><?php echo $l[email]; ?></td>
-                <td><?php echo $l[zip]; ?></td>
-				<td><input type="submit" value="Edit" /></td>
-    			<td><input type="submit" value="Delete" /></td>
-            </tr>
-            <?php
-            }
+            require('get/index.php');
             ?>
         </table>
     </div>
@@ -67,7 +54,7 @@
             <tr><th>Type <span id="tp_chars">500/500</span></th></tr>
             <tr><td><input type="text" id="type" name="type" /></td></tr>
         </table>
-        <table><tr><td style="text-align: right"><input type="submit" /></td></tr></table>
+        <table><tr><td><input type="submit" /></td></tr></table>
     </div>
     
     <div class="box">

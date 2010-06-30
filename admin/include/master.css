@@ -2,6 +2,7 @@ body {
   font-family: helvetica, arial, verdana, sans-serif;
   font-size: 14px;
   color: #333333;
+  text-rendering: optimizeLegibility;
 }
 h1, h2, h3, h4, h5 {
   color: #222222;

@@ -16,17 +16,22 @@ function ccount(id, dest, max) {
 }
 
 function del(id) {
-    $.post('delete/index.php', {id: id}, function(data) {
-        $('#r' + id + ' td').fadeOut('fast');
-        $('#alert').fadeIn(200).html(data).delay(3000).fadeOut(200);
-    });
+    if(confirm("Are you sure you want to delete this item? This action cannot be undone.")) {
+        $.post('delete/index.php', {id: id}, function(data) {
+            $('#r' + id + ' td').fadeOut('fast');
+            $('#alert').fadeIn(200).html(data).delay(3000).fadeOut(200);
+        });
+    }
 }
 
 function add() {
     var form_data = $('#new').serialize();
-    var tab = $('#list > tbody:last');
+    // var tab = $('#list > tbody:last');
     $.post("add/index.php",form_data,function(data) {
-         tab.append(data);
+         // tab.append(data);
+         $.post('get/index.php','',function(d) {
+            $('#list').html(d);
+         });
     });
     $('#new')[0].reset();
     $('#alert').fadeIn(200).html("Event succesfully added.").delay(3000).fadeOut(200);
