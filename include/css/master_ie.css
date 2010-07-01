@@ -1,0 +1,174 @@
+@font-face {
+  font-family: 'Museo Sans 500';
+  src: local("Museo Sans 500"), local("MuseoSans-500"), url('/fonts/MuseeoSans_500.otf') format('opentype'), url('/fonts/MuseoSans_500.svg#MuseoSans-500') format('svg');
+}
+@font-face {
+  font-family: 'Museo Sans 700';
+  src: local('Museo Sans 700'), local('MuseoSans-700'), url('/fonts/MuseoSans_700.otf') format('opentype'), url('/fonts/MuseoSans-700.svg#MuseoSans-700') format('svg');
+  font-weight: bold;
+}
+body {
+  font-family: helvetica, lucida grande;
+  font-size: 14px;
+  color: #333333;
+  background-color: #ffffff;
+  text-rendering: optimizeLegibility;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+}
+.container {
+  width: 60em;
+  margin: 0px auto;
+  padding: 0px 1em;
+}
+.clearfix { clear: both; }
+#top {
+  background: #222222;
+  border-top: solid 1.5px rgba(255, 255, 255, 0.25);
+}
+#top ul {
+  vertical-align: top;
+  display: inline-block;
+  float: left;
+}
+#top li { display: inline-block; }
+#top a {
+  display: inline-block;
+  width: 5em;
+  padding: 1em;
+  letter-spacing: -0.10em;
+  background-image: none;
+  font-family: 'Museo Sans 500', sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #222222;
+  -webkit-transition-property: background-image, color;
+  -webkit-transition-duration: 0.5s;
+}
+#top a:hover {
+  margin-top: -1px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.05)), to(rgba(255, 255, 255, 0)));
+  border-top: solid 1px rgba(255, 255, 255, 0.8);
+  color: #222222;
+  background-color:#ffffff;
+}
+#top li:first-child a { padding-left: none; }
+#top li small {
+  display: block;
+  font-size: 0.8em;
+  margin-top: 0.5em;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'Museo Sans 500';
+}
+#logo {
+  width: 10em;
+  float: right;
+  background-color: #cc0000;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#cc0000), to(#880000));
+  background: -moz-linear-gradient(top, #cc0000, #880000);
+  padding: 1em;
+  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+  -webkit-border-bottom-left-radius: 0.5em;
+  -webkit-border-bottom-right-radius: 0.5em;
+  -moz-border-radius-bottomleft: 0.5em;
+  -moz-border-radius-bottomright: 0.5em;
+  margin-bottom: -5em;
+}
+#nav {
+  background: #222222;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.25);
+}
+#callout {
+  background-color: #660000;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.1)), color-stop(0.1, transparent), color-stop(0.9, transparent));
+  background-position: center top;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+  background-image: url(../img/blueprint_wide.jpg);
+  color: #ffffff;
+}
+#callout div.container { padding: 3em 0px; }
+#callout h1 {
+  font-weight: bold;
+  font-family: 'Museo Sans 700', 'Museo Sans 500', sans-serif;
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
+  font-size: 2em;
+  padding-bottom: 0.5em;
+}
+#callout p {
+  line-height: 1.4em;
+  font-size: 1.25em;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+}
+#content {
+  padding: 1.5em 0px;
+  background-color: #dddddd;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#dddddd), to(#ffffff));
+  background: -moz-linear-gradient(top, #dddddd, #ffffff);
+  background-color: #ffffff;
+  border-top: solid 1px rgba(255, 255, 255, 0.5);
+}
+#content p {
+  line-height: 1.4em;
+  margin-bottom: 1.4em;
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.75);
+}
+div.shadow-top {
+  height: 10px;
+  margin-bottom: -10px;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0)));
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+  background-color: transparent;
+}
+div.shadow-bottom {
+  height: 10px;
+  margin-top: -10px;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.4)));
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+  background-color: transparent;
+}
+html, body { height: 100%; }
+#wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -7em;
+}
+#footer, #push { height: 7em; }
+#footer {
+  background-color: #333333;
+  color: #ffffff;
+  text-align: center;
+}
+#footer div.shadow-top { margin-bottom: 1em; }
+#foot_nav { margin-bottom: 1em; }
+#foot_nav small { display: none; }
+#foot_nav ul { margin: 0px; }
+#foot_nav li {
+  list-style: none;
+  padding: 0.25em;
+  display: inline-block;
+}
+#foot_nav a {
+  display: inline-block;
+  padding: 0.5em 1em;
+  font-family: 'Museo Sans 500', sans-serif;
+  color: rgba(255, 255, 255, 0.6);
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+  -webkit-transition: color 0.25s linear;
+}
+#foot_nav a:hover { 
+	color:#333333; 
+	background-color:#ffffff; 
+}
+#foot_copy {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.8em;
+}

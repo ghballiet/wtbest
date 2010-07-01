@@ -15,6 +15,7 @@
   -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
+  border: solid 1px #333333;
   border: solid 1px rgba(0, 0, 0, 0.25);
   margin: 0px 2em 2em 0px;
   background: #ffffff;
@@ -125,6 +126,7 @@
   display: inline-block;
   color: #222222;
   font-family: lucida handwriting, helvetica, lucida grande;
+  background: #fffacd;
   background: rgba(255, 250, 205, 0.95);
   -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
@@ -134,7 +136,7 @@
   border-radius: 0.25em;
   border: solid 1px #cdc89b;
   width: auto;
-  font-size: 1.15em;
+  font-size: 1.2em;
   text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.95);
 }
 #slider .nivo-caption {
