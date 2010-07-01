@@ -5,7 +5,7 @@
 <?php require('../master/header.php'); ?>
 
                     <!-- content starts here -->
-                    <form id="contact">
+                    <form id="contact" method="post" action="contact_send.php">
                         <table>
                             <tr><th>First Name</th><th>Last Name</th></tr>
                             <tr><td><input type="text" name="first_name" id="first_name" /></td><td><input type="text" name="last_name" id="last_name" /></td></tr>
