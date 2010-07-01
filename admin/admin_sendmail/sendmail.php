@@ -1,8 +1,7 @@
+<?php require_once('../include/database.php'); ?>
+<?php $link=db_connect();?>
+
 <?php
-
-require_once('../include/database.php');
-$link=db_connect();
-
 	if (isset ($_REQUEST['org_type'])) //email address was submitted
 	{
 		$org_type = $_REQUEST['org_type'];
