@@ -2,7 +2,7 @@
 <?php require('../include/header.php'); ?>
     <div class="box">
         <h2>Add Recipient</h2>
-        <form id="new">
+        <form id="new" method="POST" action="add/index.php">
         <table>
             <tr><th>First Name <span id="fn_chars">255/255</span></th><th>Last Name <span id="ln_chars">255/255</span></th></tr>
             <tr>
@@ -34,7 +34,7 @@
                 <td><input type="text" name="zip" id="zip" class="zip" /></td>
             </tr>
         </table>
-        <table><tr><td><input type="button" value="Submit" onclick="add();"/></td></tr></table>
+        <table><tr><td><input type="submit" value="Submit" /></td></tr></table>
         </form>
     </div>
     
