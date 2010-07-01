@@ -67,8 +67,8 @@
             foreach($lst as $l) {
             ?>
             <tr>
-                <td><? echo $l[name]; ?></td>
-                <td><form method="post" action="edit/"><input type="hidden" name="id" id="id" value="<?php echo $l[id]; ?>" /><input type="submit" value="Edit" /></form></td>
+                <td><?php echo $l[name]; ?></td>
+<!--				<td><form method="post" action="edit_org/"><input type="hidden" name="id" id="id" value="<?php echo $l[id]; ?>" /><input type="submit" value="Edit"  /></form></td>-->
                 <td><input type="hidden" name="id" id="id" value="<?php echo $l[id]; ?>" /><input type="submit" value="Delete" /></td>
             </tr>
             <?php
