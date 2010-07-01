@@ -22,7 +22,7 @@
                     <select id="org_type" name="org_type">
                     <option value=""></option>
                     <?php
-                    $q = "select * from org_type o order by o.name;";
+                    $q = "select distinct * from org_type o order by o.name;";
                     $list = db_query($q);
                     foreach($list as $l) { ?>
                     <option value="<?php echo $l[id]; ?>"><?php echo $l[name]; ?></option>
@@ -62,9 +62,9 @@
         <table>
             <tr><th>Type</th><th></th><th></th></tr>
             <?php
-            $q = 'select * from org_type o order by o.name;';
-            $list = db_query($q);
-            foreach($list as $l) {
+            $r = 'select * from org_type o order by o.name;';
+            $lst = db_query($r);
+            foreach($lst as $l) {
             ?>
             <tr>
                 <td><? echo $l[name]; ?></td>

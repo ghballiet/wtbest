@@ -23,7 +23,7 @@
 				</tr>
 				<tr>
 					<td>
-                    <select id="name" name="name">
+                    <select id="name" name="name" multiple="multiple">
                     <option value=""></option>
                     <?php
                     $q = "select * from mailing_list l order by l.last_name;";
