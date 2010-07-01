@@ -2,13 +2,14 @@
 <?php require('../include/header.php'); ?>
     <!--Table to add new document -->
     <div class="box">
+	<form method="post" enctype="multipart/form=data" action="add/index.php">
     <h2>Add New Document</h2>
     	<table>
     		<tr><th>Title <span id="tx_chars">500/500</span></th><th>Upload</th></tr>
     	    <tr>
     		    <td><input type="text" name="title" id="title" /></td>
     		    <td>
-    		        <input type="file" name="browse" id="browse"/>
+    		        <input type="file" name="doc" id="doc"/>
     		    </td>
     		</tr>
     	</table>
@@ -19,6 +20,7 @@
     	<table>
     	   <tr><td><input type="submit" value="Submit" /></td></tr>
     	</table>
+    	</form>
     </div>
 	
     <!--Table to Manage existing documents -->	
