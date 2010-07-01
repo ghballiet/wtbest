@@ -1,6 +1,6 @@
 <?php $_POST['title'] = 'Home'; ?>
 <?php $_POST['callout_title'] = 'Welcome to West Texas Best.'; ?>
-<?php $_POST['callout_text'] = 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.';?>
+<?php $_POST['callout_text'] = 'BEST is a non-profit, volunteer-based organization whose mission is to inspire students to pursue careers in engineering, science, and technology through participation in a sports-like, science and engineering-based robotics competition.';?>
 <?php $_POST['custom_css'] = array('../include/css/nivo-slider.css','home.css'); ?>
 <?php $_POST['custom_js'] = array('../include/js/jquery.nivo.slider.pack.js'); ?>
 <?php require('../master/header.php'); ?>
