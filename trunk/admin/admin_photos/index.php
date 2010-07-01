@@ -21,7 +21,7 @@
 <div class="box">
 	<h2>Manage Photos</h2>
 	<table>
-	    <tr><th>Photo</th><th>Caption</th><th></th><th></th></tr>
+	    <tr><th>Photo</th><th>Caption</th><!--><th></th>--><th></th></tr>
 	    <?php
 	    $q = "select * from photos p order by p.id;";
 	    $list = db_query($q);
@@ -29,7 +29,7 @@
 	    <tr>
 	        <td><a href="../../home/photo.php?i=<? echo $l[id]; ?>" target="_blank"><img src="../../home/photo.php?i=<?php echo $l[id]; ?>" class="bigpic" /></a></td>
 	        <td><?php echo $l[caption]; ?></td>
-	        <td><input type="submit" value="Edit" /></td>
+	        <!--><td><input type="submit" value="Edit" /></td> -->
 	        <td><form method="post" action="delete/"><input type="hidden" name="id" id="id" value="<? echo $l[id]; ?>" /><input type="submit" value="Delete" /></form></td>
 	    </tr>
 	    <?php    
