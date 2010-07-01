@@ -10,7 +10,7 @@ foreach($list as $l) {
     <td><?php echo $l[last_name]; ?></td>
     <td><?php echo $l[email]; ?></td>
     <td><?php echo $l[zip]; ?></td>
-	<td><input type="submit" value="Edit" /></td>
+<!--	<td><input type="submit" value="Edit" /></td>-->
 	<td><input type="button" value="Delete" onclick="del('<? echo $l[id]; ?>');"/></td>
 </tr>
 <?php
