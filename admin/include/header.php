@@ -26,6 +26,7 @@ if(!isset($_COOKIE[$SECRET_KEY])) {
                 <div id="nav">
                     <ul>
                     	<li><a href="<?php echo $_POST['extradirs']; ?>../admin_home/">Email List</a></li>
+						<li><a href="<?php echo $_POST['extradirs']; ?>../admin_sendmail/">Send Email</a></li>
                         <li><a href="<?php echo $_POST['extradirs']; ?>../admin_events/">Events</a></li>
                         <li><a href="<?php echo $_POST['extradirs']; ?>../admin_sponsors/">Sponsors</a></li>
                         <li><a href="<?php echo $_POST['extradirs']; ?>../admin_documents/">Documents</a></li>
