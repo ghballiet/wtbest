@@ -3,6 +3,7 @@
 <!-- Add New Event Table -->        
 <div class="box">
 	<h2>Upload a Photo</h2>
+	<form method="post" enctype="multipart/form=data" action="add/index.php">
 	<table>
 	   <tr><th>Photo</th><th>Caption <span id="cp_chars">500/500</span></th></tr>
 	   <tr>
@@ -13,6 +14,7 @@
 	<table>
 	   <tr><td><input type="submit" /></td></tr>
 	</table>
+	</form>
 </div>
 
 <!-- Manage Events Table -->
@@ -28,7 +30,7 @@
 	        <td><a href="../../home/photo.php?i=<? echo $l[id]; ?>" target="_blank"><img src="../../home/photo.php?i=<?php echo $l[id]; ?>" class="bigpic" /></a></td>
 	        <td><?php echo $l[caption]; ?></td>
 	        <td><input type="submit" value="Edit" /></td>
-	        <td><input type="submit" value="Delete" /></td>
+	        <td><form method="post" action="delete/"><input type="hidden" name="id" id="id" value="<? echo $l[id]; ?>" /><input type="submit" value="Delete" /></form></td>
 	    </tr>
 	    <?php    
 	    }

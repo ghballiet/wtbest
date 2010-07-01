@@ -26,15 +26,16 @@ function del(id) {
 
 function add() {
     var form_data = $('#new').serialize();
-    // var tab = $('#list > tbody:last');
+    var tab = $('#list > tbody:last');
     $.post("add/index.php",form_data,function(data) {
+        location.reload(true);
          // tab.append(data);
-         $.post('get/index.php','',function(d) {
-            $('#list').html(d);
-         });
+         // $.post('get/index.php','',function(d) {
+         //    $('#list').html(d);
+         // });
     });
-    $('#new')[0].reset();
-    $('#alert').fadeIn(200).html("Event succesfully added.").delay(3000).fadeOut(200);
+    // $('#new')[0].reset();
+    // $('#alert').fadeIn(200).html("Added succesfully.").delay(3000).fadeOut(200);
     // var str = "<tr>";
     // jQuery.each(data, function(i,field) {
     //     str += '<td>' + field.value + '</td>';
