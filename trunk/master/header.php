@@ -9,7 +9,9 @@
 
         <!-- css -->
         <link rel="stylesheet" type="text/css" href="../include/css/reset.css" />
-        <link rel="stylesheet" type="text/css" href="../include/css/master.css" />
+		<!--[if !IE]><!--><link rel="stylesheet" type="text/css" href="../include/css/master.css" /><!--<![endif]-->
+		<!--[if IE]><link rel="stylesheet" type="text/css" href="../include/css/master_ie.css" /><![endif]-->
+     #   <link rel="stylesheet" type="text/css" href="../include/css/master.css" />
     <?php foreach($_POST['custom_css'] as $cssfile) {
         echo '    <link rel="stylesheet" type="text/css" href="' . $cssfile . '" />';
         echo "\n        ";
