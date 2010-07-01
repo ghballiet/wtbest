@@ -32,7 +32,7 @@
 					<th>Date</th>
 					<th>Time</th>
 					<th>Description</th>
-					<th>Edit</th>
+<!--					<th>Edit</th>-->
 					<th>Delete</th>
 				</tr>
 				<?php
@@ -43,7 +43,7 @@
 							<td><?php $format="l F j"; echo date_format(date_create($l['date']),$format); ?></td>
 							<td><?php $format="h:iA"; echo date_format(date_create($l['time']),$format); ?></td>
 							<td><?php echo $l[description]?></td>
-							<td><form method="post" action="edit/"><input type="hidden" name="eventid" id="eventid" value="<?php echo $l[id]; ?>"><input type="submit" value="Edit"/></form></td>
+<!--							<td><form method="post" action="edit/"><input type="hidden" name="eventid" id="eventid" value="<?php echo $l[id]; ?>"><input type="submit" value="Edit"/></form></td>-->
 							<td><input type="submit" value="Delete" onclick="del('<? echo $l[id]; ?>');"/></td>
 						</tr>
 					<?php

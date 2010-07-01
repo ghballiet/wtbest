@@ -33,7 +33,7 @@
     					<tr>
     						<td><?php echo $l[title]; ?></td>
     						<td><?php echo $l[description]; ?></td>
-    						<td><form method="post" action="edit/"><input type="hidden" name="docid" id="docid" value="<?php echo $l['id']; ?>"/><input type="submit" value="Edit" /></form></td>
+    						<!--<td><form method="post" action="edit/"><input type="hidden" name="docid" id="docid" value="<?php echo $l['id']; ?>"/><input type="submit" value="Edit" /></form></td>-->
     						<td><form method="post" action="delete/"><input type="hidden" name="docid" id="docid" value="<?php echo $l['id']; ?>"/><input type="submit" value="Delete" /></form></td>
     					</tr>
     			<?php 
