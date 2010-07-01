@@ -49,15 +49,18 @@
     </div>
     
     <div class="box">
+        <form method="post" action="add_org/index.php">
         <h2>Add Organization Type</h2>
         <table>
             <tr><th>Type <span id="tp_chars">500/500</span></th></tr>
             <tr><td><input type="text" id="type" name="type" /></td></tr>
         </table>
         <table><tr><td><input type="submit" /></td></tr></table>
+        </form>
     </div>
     
     <div class="box">
+        <form method="post" action="delete/org.php">
         <h2>Organization Types</h2>
         <table>
             <tr><th>Type</th><th></th><th></th></tr>
@@ -75,6 +78,7 @@
             }
             ?>
         </table>
+        </form>
     </div>
     
     <script type="text/javascript">
