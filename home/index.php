@@ -20,7 +20,7 @@
                     <!-- mailing list signup -->
                     <div id="signup">
                         <h2>Sign Up for our Mailing List</h2>
-                        <form>
+                        <form method="post" action="signup.php">
                             <table>
                                 <tr><th>First Name</th><th>Last Name</th></tr>
                                 <tr>
@@ -31,10 +31,10 @@
                                 <tr>
                                     <td colspan="2'"><input type="text" name="email" id="email" /></td>
                                 </tr>
-                                <tr><th>Confirm Email Address</th></tr>
+                                <!--<tr><th>Confirm Email Address</th></tr>
                                 <tr>
                                     <td colspan="2'"><input type="text" name="email_confirm" id="email_confirm" /></td>
-                                </tr>
+                                </tr> -->
                                 <tr><th>Organization or School Name</th></tr>
                                 <tr>
                                     <td colspan="2"><input type="text" name="org_name" id="org_name" /></td>

@@ -24,7 +24,7 @@
                     $q = "select * from mailing_list l order by l.last_name;";
                     $list = db_query($q);
                     foreach($list as $l) { ?>
-                    <p><input type="checkbox" name="name[]" value="<? echo $l[id]; ?>"><? echo $l[first_name] . ' ' . $l[last_name]; ?><? echo $l[name]; ?>(<?echo $l[email]; ?>)</p>
+                    <p><input type="checkbox" name="name[]" value="<? echo $l[id]; ?>"><? echo $l[first_name] . ' ' . $l[last_name]; ?><? echo $l[name]; ?> (<?echo $l[email]; ?>)</p>
                     <?php
                     }
                     ?>
