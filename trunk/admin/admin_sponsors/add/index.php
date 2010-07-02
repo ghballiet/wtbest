@@ -12,8 +12,8 @@ if(isset($_POST['name']) && $_FILES['logo']['size'] > 0) {
     $content = addslashes($content);
     fclose($fp);
     
-    $name = $_POST['name'];
-    $url = $_POST['url'];
+    $name = addslashes($_POST['name']);
+    $url = addslashes($_POST['url']);
     $q = "INSERT INTO sponsor VALUES (0,'$content','$name','$url');";
     db_update($q);
     

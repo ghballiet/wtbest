@@ -12,8 +12,8 @@ if(isset($_POST['title']) && $_FILES['doc']['size'] > 0) {
     $content = addslashes($content);
     fclose($fp);
     
-    $title = $_POST['title'];
-    $description = $_POST['description'];
+    $title = addslashes($_POST['title']);
+    $description = addslashes($_POST['description']);
     
     $q = "INSERT INTO documents VALUES (0,'$title','$description','$content');";
     db_update($q);

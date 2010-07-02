@@ -12,7 +12,7 @@ if(isset($_POST['caption']) && $_FILES['photo']['size'] > 0) {
     $content = addslashes($content);
     fclose($fp);
     
-    $caption = $_POST['caption'];
+    $caption = addslashes($_POST['caption']);
     $q = "INSERT INTO photos VALUES (0,'$content','$caption');";
     db_update($q);
     
