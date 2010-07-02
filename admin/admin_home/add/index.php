@@ -1,10 +1,10 @@
 <?php
-$org_name = $_POST['org_name'];
-$type = $_POST['org_type'];
-$first_name = $_POST['first_name'];
-$last_name = $_POST['last_name'];
-$email = $_POST['email'];
-$zip = $_POST['zip'];
+$org_name = addslashes($_POST['org_name']);
+$type = addslashes($_POST['org_type']);
+$first_name = addslashes($_POST['first_name']);
+$last_name = addslashes($_POST['last_name']);
+$email = addslashes($_POST['email']);
+$zip = addslashes($_POST['zip']);
 
 require_once('../../include/database.php');
 $link = db_connect();

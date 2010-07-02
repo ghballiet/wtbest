@@ -1,9 +1,9 @@
 <?php
 require_once('../../include/database.php');
 $link=db_connect();
-$dt = $_POST[date];
-$tm = $_POST[time];
-$ds = $_POST[description];
+$dt = addslashes($_POST[date]);
+$tm = addslashes($_POST[time]);
+$ds = addslashes($_POST[description]);
 try {
     db_update("INSERT INTO events VALUES (0,'" . $dt . "','" . $tm . "','" . $ds . "');");
     $list = db_query("SELECT e.id FROM events e WHERE e.date='" . $dt . "' AND e.time='" . $tm . "' AND e.description='" . $ds . 
