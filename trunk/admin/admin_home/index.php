@@ -60,25 +60,23 @@
     </div>
     
     <div class="box">
-        <form method="post" action="delete/org.php">
         <h2>Organization Types</h2>
         <table>
             <tr><th>Type</th><th></th><th></th></tr>
             <?php
             $r = 'select * from org_type o order by o.name;';
-            $lst = db_query($r);
-            foreach($lst as $l) {
+            $list = db_query($r);
+            foreach($list as $l) {
             ?>
             <tr>
                 <td><?php echo $l[name]; ?></td>
-<!--				<td><form method="post" action="edit_org/"><input type="hidden" name="id" id="id" value="<?php echo $l[id]; ?>" /><input type="submit" value="Edit"  /></form></td>-->
-                <td><input type="hidden" name="id" id="id" value="<?php echo $l[id]; ?>" /><input type="submit" value="Delete" /></td>
+				<td><form method="post" action="edit/org.php"><input type="hidden" name="docid" id="docid" value="<?php echo $l['id']; ?>" /><input type="submit" value="Edit"  /></form></td>
+                <td><form method="post" action="delete/org.php"><input type="hidden" name="id" id="id" value="<?php echo $l['id']; ?>" /><input type="submit" value="Delete" /></form></td>
             </tr>
             <?php
             }
             ?>
         </table>
-        </form>
     </div>
     
     <script type="text/javascript">

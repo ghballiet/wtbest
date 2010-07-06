@@ -10,8 +10,10 @@ foreach($list as $l) {
     <td><?php echo $l[last_name]; ?></td>
     <td><?php echo $l[email]; ?></td>
     <td><?php echo $l[zip]; ?></td>
-<!--	<td><input type="submit" value="Edit" /></td>-->
-	<td><input type="button" value="Delete" onclick="del('<? echo $l[id]; ?>');"/></td>
+	<td><form method="post" action="edit/" ><input type="hidden" name="docid" id="docid" value="<?php echo $l['id']; ?>"/><input type="submit" value="Edit" /></form></td> 
+	<td><form method="post" action="delete/"><input type="hidden" name="id" id="id" value="<?php echo $l['id']; ?>"/><input type="submit" value="Delete" /></form></td>
+    				
+<!--	<td><input type="button" value="Delete" onclick="del('<? echo $l[id]; ?>');"/></td> -->
 </tr>
 <?php
 }
