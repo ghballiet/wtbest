@@ -12,5 +12,5 @@ db_update("INSERT INTO mailing_list (id, first_name, last_name, email, org_name,
 // $q = "SELECT o.name from org_type o where o.id='" . $type . "';";
 // $list = db_query($q);
 db_disconnect($link);
-header('Location: ..');
+header('Location: ../?msg=Update succeeded.'); 
 ?>
