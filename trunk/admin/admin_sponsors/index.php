@@ -30,7 +30,7 @@
 				<th>Name</th>
 				<th>Logo</th>
 				<th>Link</th>
-<!--				<th>Edit</th>-->
+				<th>Edit</th>
 				<th>Delete</th>
 			</tr>
 			<?php
@@ -40,9 +40,9 @@
 				<tr>
 					<td><?php echo $l[name]?></td>
 					<td><img src="../../include/img?i=<?php echo $l[id]?>" /></td>
-					<td><a href="<?php echo $l[url]?>"><?php echo $l[url]; ?></a></td>
-<!--					<td><form method="post" action="edit/"><input type="hidden" name="id" id="id" value="<?php echo $l[id]; ?>" /><input type="submit" value="Edit" /></form></td>-->
-					<td><form method="post" action="delete/index.php"><input type="hidden" name="id" id="id" value="<? echo $l[id]; ?>"><input type="submit" value="Delete" /></form></td>
+					<td><a href="<?php echo $l[url]?>"><?php echo $l[url] ?></a></td>
+					<td><form method="post" action="edit/"><input type="hidden" name="id" id="id" value="<?php echo $l['id']; ?>" /><input type="submit" value="Edit" /></form></td>
+					<td><form method="post" action="delete/"><input type="hidden" name="id" id="id" value="<?php echo $l['id']; ?>" /><input type="submit" value="Delete" /></form></td>
 				</tr>
 			<?php
 			}
