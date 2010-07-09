@@ -16,7 +16,7 @@ if(isset($_POST['caption']) && $_FILES['photo']['size'] > 0) {
     $q = "INSERT INTO photos VALUES (0,'$content','$caption');";
     db_update($q);
     
-    header('Location: ..');
+    header('Location: ../?msg=Update succeeded.');
 }
 ?>
 <?php db_disconnect($link); ?>
