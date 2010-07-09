@@ -34,7 +34,7 @@
             }
             $nstr = substr($nstr,0,-3);
             $list2 = "SELECT m.email FROM mailing_list m WHERE m.id IN (" . $nstr . ");";
-            $mail_list2 = db_query($list1);
+            $mail_list2 = db_query($list2);
             foreach($mail_list2 as $l) {
                 echo "Mailing: " . $l[email];
                 if(mail($l[email],$subject,$message,"From: donotreply@wtbest.org")) {

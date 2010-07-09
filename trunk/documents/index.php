@@ -1,6 +1,6 @@
 <?php $_POST['title'] = 'Documents'; ?>
 <?php $_POST['callout_title'] = 'Read all about it.'; ?>
-<?php $_POST['callout_text'] = "Without the help of the companies you see below, West Texas BEST wouldn't be possible. By clicking the links below, you're not only supporting future BEST competitions; you're also encouraging the study of science and technology for our participants. And that is what BEST is all about.";?>
+<?php $_POST['callout_text'] = "Important Information for West Texas BEST can be found by clicking on the links below.";?>
 <?php $_POST['custom_css'] = array('documents.css'); ?>
 <?php require('../master/header.php'); ?>
 

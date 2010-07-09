@@ -1,17 +1,24 @@
 <?php require_once('../include/php/database.php'); ?>
 <?php $link=db_connect();?>
 
-<?php?	if (isset ($_REQUEST['email'])) //email address was submitted
+<?php	if (isset ($_POST['email'])) //email address was submitted
 	{
-			$email = $_REQUEST['email'];
-			$message = $_REQUEST['message'];
-			$first_name = $_REQUEST['first_name'];
-			$last_name = $_REQUEST['last_name'];
+			$email = $_POST['email'];
+			$message = $_POST['message'];
+			$first_name = $_POST['first_name'];
+			$last_name = $_POST['last_name'];
 	
-		mail("admin@wtbest.com","WTBest Contact Form from $first_name $last_name",$message,"From: $email");
-	)
+		if(	mail("jennkini@gmail.com","WTBest Contact Form from $first_name $last_name",$message,"From: $email")) {
+			db_disconnect($link);
+			header('Location: ../?msg=Message successful.');  }
+		else {
+            db_disconnect($link); 
+			header('Location: ../?msg=Message Failed.'); 
+        }
+	}
 	else //email not filled in
 	{
-		echo "Invalid Email Submitted";
+		db_disconnect($link); 
+		header('Location: ../?msg=Email address not entered.');
 	}
 ?>

@@ -1,6 +1,6 @@
 <?php $_POST['title'] = 'Events'; ?>
 <?php $_POST['callout_title'] = 'Find out what we\'re up to.'; ?>
-<?php $_POST['callout_text'] = 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.';?>
+<?php $_POST['callout_text'] = 'Dates of upcoming West Texas BEST Events.';?>
 <?php $_POST['custom_css'] = array('events.css'); ?>
 <?php require('../master/header.php'); ?>
 

@@ -4,13 +4,13 @@
         <h2>Send Email</h2>
 		<form method="post" action="sendmail.php">
 			<table>
-				<tr><th>Organization Type to Email<th><tr>
+				<tr><th>Organization Type to Email</th></tr>
 				<tr> <td>
                     <?php
                     $q = "select * from org_type o order by o.name;";
                     $list = db_query($q);
                     foreach($list as $l) { ?>
-                    <p><input type="checkbox" name="org_type[]" value="<? echo $l[id]; ?>"/><? echo $l[name]; ?></p>
+                    <p><input type="checkbox" name="org_type[]" value="<?php echo $l[id]; ?>"/><?php echo $l[name]; ?></p>
                     <?php
                     }
                     ?>
@@ -24,7 +24,7 @@
                     $q = "select * from mailing_list l order by l.last_name;";
                     $list = db_query($q);
                     foreach($list as $l) { ?>
-                    <p><input type="checkbox" name="name[]" value="<? echo $l[id]; ?>"><? echo $l[first_name] . ' ' . $l[last_name]; ?><? echo $l[name]; ?> (<?echo $l[email]; ?>)</p>
+                    <p><input type="checkbox" name="name[]" value="<?php echo $l[id]; ?>" /><?php echo $l[first_name] . ' ' . $l[last_name]; ?><?php echo $l[name]; ?> (<?php echo $l[email]; ?>)</p>
                     <?php
                     }
                     ?>
