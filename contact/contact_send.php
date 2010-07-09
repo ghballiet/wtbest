@@ -8,7 +8,7 @@
 			$first_name = $_POST['first_name'];
 			$last_name = $_POST['last_name'];
 	
-		if(	mail("jennkini@gmail.com","WTBest Contact Form from $first_name $last_name",$message,"From: $email")) {
+		if(	mail("admin@wtbest.com","WTBest Contact Form from $first_name $last_name",$message,"From: $email")) {
 			db_disconnect($link);
 			header('Location: ../?msg=Message successful.');  }
 		else {
