@@ -1,4 +1,6 @@
-<?php require_once('../include/database.php'); ?>
+<?php require_once('../include/database.php'); 
+//<!-- admin/admin_sendmail/sendmail.php : is called by admin_sendmail/index.php to query database to send mail to 
+//	chosen recipients from mailing_list -->?>
 <?php $link=db_connect(); ?>
 <?php
 	if (isset($_POST['org_type']) or isset($_POST['name'])) //email address was submitted

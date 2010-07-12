@@ -1,4 +1,5 @@
 <?php
+//<!-- admin_events/delete/index.php : is called by admin_events/index to allow admin to delete an event from the calendar.  -->
 require_once('../../include/database.php');
 $link=db_connect();
 //$q = "SELECT * FROM events e WHERE id='" . $_POST['id'] . "';";

@@ -1,4 +1,4 @@
-﻿<?php $_POST['title'] = 'Sponsors'; ?>
+﻿<?php $_POST['title'] = 'Sponsors';?>
 <?php require('../include/header.php'); ?>
 <!-- Add Sponsor Logo and Link Table -->
     <div class="box">
@@ -39,7 +39,7 @@
                 foreach($list as $l) { ?>
 				<tr>
 					<td><?php echo $l[name]?></td>
-					<td><img src="../../include/img?i=<?php echo $l[id]?>" /></td>
+					<td><img src="../../include/img/?i=<?php echo $l[id]?>" /></td>
 					<td><a href="<?php echo $l[url]?>"><?php echo $l[url] ?></a></td>
 					<td><form method="post" action="edit/"><input type="hidden" name="id" id="id" value="<?php echo $l['id']; ?>" /><input type="submit" value="Edit" /></form></td>
 					<td><form method="post" action="delete/"><input type="hidden" name="id" id="id" value="<?php echo $l['id']; ?>" /><input type="submit" value="Delete" /></form></td>

@@ -1,3 +1,5 @@
+<!-- admin_home/edit_org/index.php : is called by admin_home/index to allow admin to edit an organization in the database. -->
+
 <?php $_POST['title'] = 'Edit Organization List'; ?>
 <?php $_POST['extradirs'] = '../'; ?>
 <?php $id = $_POST['docid']; ?>

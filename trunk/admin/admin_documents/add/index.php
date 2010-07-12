@@ -17,8 +17,7 @@ if(isset($_POST['title']) && $_FILES['doc']['size'] > 0) {
     
     $q = "INSERT INTO documents VALUES (0,'$title','$description','$content');";
     db_update($q);
-    
-    header('Location: ..');
 }
 ?>
 <?php db_disconnect($link); ?>
+<?php header('Location: ../?msg=Update succeeded.');?>

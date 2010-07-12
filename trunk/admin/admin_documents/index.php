@@ -1,4 +1,7 @@
-﻿<?php $_POST['title']='Documents'; ?>
+﻿<!-- admin_documents/index.php : Lists all documents' and their description and title and gives option to add a new one, 
+	edit, or delete existing documents.  Document has to be a PDF file. -->
+
+<?php $_POST['title']='Documents'; ?>
 <?php require('../include/header.php'); ?>
     <!--Table to add new document -->
     <div class="box">

@@ -1,4 +1,7 @@
-<?php require_once('../../include/database.php'); ?>
+<?php require_once('../../include/database.php'); 
+//<!-- admin/admin_sponsors/update/index.php :  is called from admin/admin_sponsors/edit/index to query a 
+//	sponsor to edit it in the database. -->
+?>
 <?php $link=db_connect(); ?>
 <?php					
 	$update_str = " ";

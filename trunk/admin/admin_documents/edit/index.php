@@ -1,3 +1,6 @@
+<!-- admin_documents/edit/index.php : is called by admin_documents/index.php to give user form to edit a document's 
+	title and description. -->
+
 <?php $_POST['title'] = 'Edit Document'; ?>
 <?php $_POST['extradirs'] = '../'; ?>
 <?php $id = $_POST['docid']; ?>
@@ -17,10 +20,10 @@
         <label for="description">Description</label>
         <textarea name="description" id="description"><?php echo $l[description]; ?></textarea>
     </p>
-    <p>
+<!--    <p>
         <label for="file">Upload File</label>
         <input type="file" name="file" id="file" />
-    </p>
+    </p>-->
     <p><input type="submit" value="Save Changes"></p>
     <?php   
     }
