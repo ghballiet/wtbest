@@ -1,3 +1,6 @@
+<!-- admin/admin_home/edit/index.php : is called by admin_home/index to allow admin to edit a 
+	mailing_list recipient in the database. -->
+
 <?php $_POST['title'] = 'Edit Mail List'; ?>
 <?php $_POST['extradirs'] = '../'; ?>
 <?php $id = $_POST['docid']; ?>
@@ -21,11 +24,15 @@
 			foreach($org as $g) {
 		?>
         <select id="org_type" name="org_type">
-			<option value="org_type"><?php echo $g[name]; ?></option>
-            <option value="jrhigh">Junior High School</option>
-            <option value="srhigh">High School</option>
-            <option value="sponsor">Sponsor</option>
-            <option value="other">Other</option>
+            <option value="<?php echo $g[id]; ?>"><?php echo $g[name]; ?></option>
+            <?php
+            $r = "select distinct * from org_type o order by o.name;";
+            $listr = db_query($r);
+            foreach($listr as $n) { ?>
+            <option value="<?php echo $n[id]; ?>"><?php echo $n[name]; ?></option>
+            <?php
+            }
+            ?>
         </select>
 		<?php
 		}

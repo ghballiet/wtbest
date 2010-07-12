@@ -1,4 +1,6 @@
-<?php require_once('../../include/database.php'); ?>
+<?php require_once('../../include/database.php'); 
+//<!-- admin/admin_photos/update/index.php : is called by admin_photos/edit/index.php to do the query to edit photo caption in 
+	//database. -->?>
 <?php $link=db_connect(); ?>
 <?php
 $update_str = " ";

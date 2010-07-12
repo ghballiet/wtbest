@@ -1,3 +1,6 @@
+<!-- admin_events/add/index.php : is called by admin_events/index to allow admin to add a new event to the calendar. 
+	date must be entered in YEAR-MM-DD format and time in HH:MM format -->
+
 <?php
 require_once('../../include/database.php');
 $link=db_connect();

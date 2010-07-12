@@ -1,4 +1,6 @@
-<?php require_once('../../include/database.php'); ?>
+<?php require_once('../../include/database.php'); 
+//<!-- admin/admin_sponsors/add/index.php : is called from admin/admin_sponsors/index to add a sponsor to the database. -->
+?>
 <?php $link=db_connect(); ?>
 <?php
 if(isset($_POST['name']) && $_FILES['logo']['size'] > 0) {
@@ -21,3 +23,4 @@ if(isset($_POST['name']) && $_FILES['logo']['size'] > 0) {
 }
 ?>
 <?php db_disconnect($link); ?>
+<?php header('Location: ../?msg=Update succeeded.'); ?>

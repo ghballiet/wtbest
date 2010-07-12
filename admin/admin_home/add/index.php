@@ -1,4 +1,5 @@
 <?php
+//<!-- wtbest/admin/admin_home/add/index.php : is called by wtbest/admin/admin_home/index.php to add user to mailing_list. -->
 $org_name = addslashes($_POST['org_name']);
 $type = addslashes($_POST['org_type']);
 $first_name = addslashes($_POST['first_name']);

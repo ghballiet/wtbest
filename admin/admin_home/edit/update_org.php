@@ -1,4 +1,7 @@
-<?php require_once('../../include/database.php'); ?>
+<?php require_once('../../include/database.php'); 
+//<!-- admin/admin_home/edit/update_org.php : is called by admin_home/edit to process query to edit organization
+//	in the database. -->
+?>
 <?php $link=db_connect(); ?>
 <?php
 	$update_str = " ";

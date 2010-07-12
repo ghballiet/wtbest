@@ -1,4 +1,6 @@
-<?php require_once('../../include/database.php'); ?>
+<?php require_once('../../include/database.php'); 
+//<!-- admin_events/update/index.php : is called by admin_events/edit/index to perform query to edit event in the calendar. 
+//	date must be entered in YEAR-MM-DD format and time in HH:MM format --> ?>
 <?php $link=db_connect(); ?>
 <?php
     $update_str = " ";

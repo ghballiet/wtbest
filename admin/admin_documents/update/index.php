@@ -1,4 +1,6 @@
-<?php require_once('../../include/database.php'); ?>
+<?php require_once('../../include/database.php'); 
+//<!-- admin_documents/update/index.php : is called by admin_documents/edit/index.php to perform the query to edit a document's 
+//	title and description. -->?>
 <?php $link=db_connect(); ?>
 <?php
     $update_str = " ";

@@ -1,4 +1,6 @@
-<?php require_once('../../include/database.php'); ?>
+<?php require_once('../../include/database.php'); 
+//<!-- admin/admin_photos/add/index.php : is called by admin_photos/index.php to give user form to add a photo with caption to 
+//	WTBest home page. -->?>
 <?php $link=db_connect(); ?>
 <?php
 if(isset($_POST['caption']) && $_FILES['photo']['size'] > 0) {

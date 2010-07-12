@@ -1,4 +1,6 @@
-<?php require_once('../../include/database.php'); ?>
+<?php require_once('../../include/database.php'); 
+//<!-- admin/admin_home/update/index.php : is called by admin_home/index to process query to 
+//	update a mailing list entry	 -->?>
 <?php $link=db_connect(); ?>
 <?php
 		//db_udpdate("UPDATE mailing_list SET org_name='" . $_POST[org_name] . "', org_type='" . $_POST[org_type] . "', first_name='" . $_POST[first_name] . "', last_name='" . $_POST[last_name] . "', email='" . $_POST[email] . "', zip='" . $_POST[zip] . "'

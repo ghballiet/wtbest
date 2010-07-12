@@ -1,3 +1,6 @@
+<!-- admin/admin_photos/index.php : is used for admin to view photos in the database and 
+		also edit captions or delete photos-->
+
 <?php $_POST['title'] = 'Photos'; ?>
 <?php require('../include/header.php'); ?>
 <!-- Add New Event Table -->        

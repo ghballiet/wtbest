@@ -1,3 +1,5 @@
+<!-- admin/admin_photos/edit/index.php : is called by admin_photos/index.php to give user form to edit a photo's caption. -->
+
 <?php $_POST['title'] = 'Edit Photos'; ?>
 <?php $_POST['extradirs'] = '../'; ?>
 <?php $id = $_POST['id']; ?>
@@ -12,7 +14,7 @@
 	<p>
 		<input type="hidden" name="id" id="id" value="<?php echo $l[id]; ?>" />
         <label for="photo">Picture</label>
-        <input type="file" id="photo" name="photo" />
+<!--      <input type="file" id="photo" name="photo" />-->
         <img src="../../../home/photo.php?i=<?php echo $l[id]; ?>" style="max-width: 500px; max-height: 200px; margin: 2em;"/>
     </p>
     <p>
