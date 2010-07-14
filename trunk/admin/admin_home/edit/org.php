@@ -1,7 +1,6 @@
-<!-- admin/admin_home/edit/org.php : is called by admin_home/index to allow admin to edit organization in the database. 
-	 -->
-
-<?php $_POST['title'] = 'Edit Organization List'; ?>
+<?php $_POST['title'] = 'Edit Organization List'; 
+//<!-- admin/admin_home/edit/org.php : is called by admin_home/index to allow admin to edit organization in the database. 
+	 //-->?>
 <?php $_POST['extradirs'] = '../'; ?>
 <?php $id = $_POST['docid']; ?>
 <?php require('../../include/header.php'); ?>
