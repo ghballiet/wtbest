@@ -8,6 +8,7 @@
                 <div id="foot_nav">
                     <ul><?php require('nav.php'); ?><?php genli('../admin','Administrator Login',''); ?></ul>
                 </div>
+				<div class=clearfix></div>
                 <div id="foot_copy">
                     Design Copyright &copy; Glen Hunt &amp; Jennifer Emanuel. All Rights Reserved. 
                 </div>

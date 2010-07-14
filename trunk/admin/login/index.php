@@ -11,7 +11,7 @@ if(!isset($_POST['email']) || !isset($_POST['password']) || $_POST['email'] == N
 }
 
 $email = trim($_POST['email']);
-$password = trim($_POST['password']);
+$password = trim($_POST['password']); 
 
 $q = "select * from admin a where a.email='" . $email . "' and a.password=password('" . $password . "');";
 $list = db_query($q);

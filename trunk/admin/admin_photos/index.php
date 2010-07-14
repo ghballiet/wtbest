@@ -1,9 +1,8 @@
-<!-- admin/admin_photos/index.php : is used for admin to view photos in the database and 
-		also edit captions or delete photos-->
-
-<?php $_POST['title'] = 'Photos'; ?>
+<?php $_POST['title'] = 'Photos'; 
+//<!-- admin/admin_photos/index.php : is used for admin to view photos in the database and 
+//		also edit captions or delete photos-->?>
 <?php require('../include/header.php'); ?>
-<!-- Add New Event Table -->        
+<!-- Add New Photo Table -->        
 <div class="box">
 	<h2>Upload a Photo</h2>
 	<form method="post" enctype="multipart/form=data" action="add/index.php">
@@ -20,17 +19,22 @@
 	</form>
 </div>
 
-<!-- Manage Events Table -->
+<!-- Manage Photos Table -->
 <div class="box">
 	<h2>Manage Photos</h2>
 	<table>
-	    <tr><th>Photo</th><th>Caption</th><!--><th></th>--><th></th></tr>
+	    <tr>
+			<th>Photo</th>
+			<th>Caption</th>
+			<th></th>
+			<th></th>
+		</tr>
 	    <?php
 	    $q = "select * from photos p order by p.id;";
 	    $list = db_query($q);
 	    foreach($list as $l) {?>
 	    <tr>
-	        <td><a href="../../home/photo.php?i=<? echo $l[id]; ?>" target="_blank"><img src="../../home/photo.php?i=<?php echo $l[id]; ?>" class="bigpic" /></a></td>
+	        <td><a href="../../home/photo.php?i=<?php echo $l[id]; ?>" target="_blank"><img src="../../home/photo.php?i=<?php echo $l[id]; ?>" class="bigpic" /></a></td>
 	        <td><?php echo $l[caption]; ?></td>
 	        <td><form method="post" action="edit/"><input type="hidden" name="id" id="id" value="<?php echo $l['id']; ?>" /><input type="submit" value="Edit" /></form></td>
 	        <td><form method="post" action="delete/"><input type="hidden" name="id" id="id" value="<?php echo $l['id']; ?>" /><input type="submit" value="Delete" /></form></td>

@@ -1,7 +1,6 @@
-<!-- admin/admin_home/index.php : allows admin to view mailing_list and option to add to mailing_list
-	or edit or delete from it and also to view organization types and add to org type list or edit or delete from it -->
-
-<?php $_POST['title'] = 'Email List'; ?>
+<?php $_POST['title'] = 'Email List'; 
+//<!-- admin/admin_home/index.php : allows admin to view mailing_list and option to add to mailing_list
+//	or edit or delete from it and also to view organization types and add to org type list or edit or delete from it -->?>
 <?php require('../include/header.php'); ?>
     <div class="box">
         <h2>Add Recipient</h2>

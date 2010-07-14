@@ -1,7 +1,6 @@
-<!-- admin_documents/edit/index.php : is called by admin_documents/index.php to give user form to edit a document's 
-	title and description. -->
-
-<?php $_POST['title'] = 'Edit Document'; ?>
+<?php $_POST['title'] = 'Edit Document'; 
+//<!-- admin_documents/edit/index.php : is called by admin_documents/index.php to give user form to edit a document's 
+//	title and description. -->?>
 <?php $_POST['extradirs'] = '../'; ?>
 <?php $id = $_POST['docid']; ?>
 <?php require('../../include/header.php'); ?>
