@@ -1,7 +1,6 @@
-<!-- admin/admin_sendmail/index.php : is used to allow admin to send mail to various groups or individuals 
-	in the mailing list -->
-
-<?php $_POST['title'] = 'Send Email'; ?>
+<?php $_POST['title'] = 'Send Email'; 
+//<!-- admin/admin_sendmail/index.php : is used to allow admin to send mail to various groups or individuals 
+//	in the mailing list -->?>
 <?php require('../include/header.php'); ?>
     <div class="box">
         <h2>Send Email</h2>

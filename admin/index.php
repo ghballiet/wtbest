@@ -15,7 +15,7 @@
                 <table>
                     <tr><th>Email</th><td><input type="text" id="email" name="email" /></td></tr>
                     <tr><th>Password</th><td><input type="password" id="password" name="password" /></td></tr>
-                    <tr><td colspan="2"><input type="submit" value="Log In" /></td></tr>
+                    <tr><td colspan="2"><input type="submit" value="Log In" /></td><td></td></tr>
                 </table>
             </form>
         </div>

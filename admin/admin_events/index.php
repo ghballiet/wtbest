@@ -1,7 +1,6 @@
-﻿<!-- admin_events/index.php : is to allow admin to add new events to the calendar with a date and description. 
-	date must be entered in YEAR-MM-DD format and time in HH:MM format -->
-
-<?php $_POST['title'] = 'Events'; ?>
+﻿<?php $_POST['title'] = 'Events'; 
+//<!-- admin_events/index.php : is to allow admin to add new events to the calendar with a date and description. 
+//	date must be entered in YEAR-MM-DD format and time in HH:MM format -->?>
 <?php require('../include/header.php'); ?>
     <!-- Add New Event Table -->        
 		<div class="box">

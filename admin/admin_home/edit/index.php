@@ -1,7 +1,6 @@
-<!-- admin/admin_home/edit/index.php : is called by admin_home/index to allow admin to edit a 
-	mailing_list recipient in the database. -->
-
-<?php $_POST['title'] = 'Edit Mail List'; ?>
+<?php $_POST['title'] = 'Edit Mail List';
+//<!-- admin/admin_home/edit/index.php : is called by admin_home/index to allow admin to edit a 
+//	mailing_list recipient in the database. --> ?>
 <?php $_POST['extradirs'] = '../'; ?>
 <?php $id = $_POST['docid']; ?>
 <?php require('../../include/header.php'); ?>

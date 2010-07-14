@@ -31,12 +31,15 @@ a {
 }
 #top ul {
   vertical-align: top;
-  display: inline-block;
+  display: block;
+  zoom: 1;
   float: left;
 }
-#top li { display: inline-block; }
+#top li { display: block;
+	float: left;
+	}
 #top a {
-  display: inline-block;
+  display: block;
   width: 5em;
   padding: 1em;
   letter-spacing: -0.10em;
@@ -47,6 +50,7 @@ a {
   background-color: #222222;
   -webkit-transition-property: background-image, color;
   -webkit-transition-duration: 0.5s;
+  display: inline;
 }
 #top a:hover {
   margin-top: -1px;
@@ -69,16 +73,17 @@ a {
   float: right;
   background-color: #cc0000;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#cc0000), to(#880000));
-  background: -moz-linear-gradient(top, #cc0000, #880000);
-  padding: 1em;
-  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+  padding: 2em;
+  margin-bottom: -5em;
+  border-bottom: 0.5em;
+  <!--  background: -moz-linear-gradient(top, #cc0000, #880000);-->
+<!--  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
   -webkit-border-bottom-left-radius: 0.5em;
   -webkit-border-bottom-right-radius: 0.5em;
   -moz-border-radius-bottomleft: 0.5em;
-  -moz-border-radius-bottomright: 0.5em;
-  margin-bottom: -5em;
+  -moz-border-radius-bottomright: 0.5em; -->
 }
 #nav {
   background: #222222;
@@ -144,7 +149,6 @@ html, body { height: 100%; }
 #footer, #push { height: 7em; }
 #footer {
   background-color: #333333;
-  color: #ffffff;
   text-align: center;
 }
 #footer div.shadow-top { margin-bottom: 1em; }
@@ -154,21 +158,25 @@ html, body { height: 100%; }
 #foot_nav li {
   list-style: none;
   padding: 0.25em;
-  display: inline-block;
+  display: block;
+  float: left;
 }
 #foot_nav a {
-  display: inline-block;
+  display: block;
+  float: left;
   padding: 0.5em 1em;
   font-family: 'Museo Sans 500', sans-serif;
-  color: rgba(255, 255, 255, 0.6);
-  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
-  -webkit-transition: color 0.25s linear;
+  color: #ffffff;
+<!--  color: rgba(255, 255, 255, 0.6);-->
+<!--  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);-->
+<!--  -webkit-transition: color 0.25s linear;-->
 }
 #foot_nav a:hover { 
-	color:#333333; 
+	color:#000000; 
 	background-color:#ffffff; 
 }
 #foot_copy {
-  color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
   font-size: 0.8em;
+  float: center;
 }

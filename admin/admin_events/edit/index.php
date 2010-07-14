@@ -1,7 +1,6 @@
-<!-- admin_events/edit/index.php : is called by admin_events/index to allow admin to edit an existing event in the calendar. 
-	date must be entered in YEAR-MM-DD format and time in HH:MM format -->
-
-<?php $_POST['title'] = 'Edit Event'; ?>
+<?php $_POST['title'] = 'Edit Event'; 
+//<!-- admin_events/edit/index.php : is called by admin_events/index to allow admin to edit an existing event in the calendar. 
+//	date must be entered in YEAR-MM-DD format and time in HH:MM format -->?>
 <?php $_POST['extradirs'] = '../'; ?>
 <?php $id = $_POST['eventid']; ?>
 <?php require('../../include/header.php'); ?>

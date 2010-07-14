@@ -1,7 +1,7 @@
-<!-- admin/admin_sponsors/edit/index.php :  is called from admin/admin_sponsors/index to edit a sponsor's
-	name or URL in the database.  To edit the Logo the sponsor would need to be deleted and readded -->
-
-<?php $_POST['title'] = 'Edit Sponsor'; ?>
+<?php $_POST['title'] = 'Edit Sponsor'; 
+//<!-- admin/admin_sponsors/edit/index.php :  is called from admin/admin_sponsors/index to edit a sponsor's
+//	name or URL in the database.  To edit the Logo the sponsor would need to be deleted and readded -->
+?>
 <?php $_POST['extradirs'] = '../'; ?>
 <?php $id = $_POST['id']; ?>
 <?php require('../../include/header.php'); ?>
