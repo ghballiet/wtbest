@@ -1,13 +1,15 @@
 <?php
 
 function db_connect() {
+    $link = mysql_connect('wtbest.org','wtbestor_wtbest','wtb3$t');
     $link = mysql_connect('localhost','root');
     
     if(!$link) {
         die('Could not connect: ' . mysql_error());
     }
 
-    mysql_select_db('wtbest');
+    mysql_select_db('wtbest_wtbestor');
+    // mysql_select_db('wtbest');
     return $link;
 }
 

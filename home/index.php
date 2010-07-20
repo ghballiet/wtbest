@@ -63,17 +63,7 @@
                             </table>
                         </form>
                     </div>
-					
-					<p>        <br><br>       
-					</p>
-					<p>       <br><br>
-					</p>
-					<p>   BEST is a non-profit, volunteer-based organization whose mission is to inspire students to pursue careers in engineering, science, and technology through participation in a sports-like, science and engineering-based robotics competition.                                                                                                                                                                                                                                                                                                                                                                                         
-					</p>
-					<p>        <br><br>       
-					</p>
-					<p>       <br><br>
-					</p>
+                    <div class="clearfix"></div>
                 
                     <script type="text/javascript">
                     $(window).load(function() {
