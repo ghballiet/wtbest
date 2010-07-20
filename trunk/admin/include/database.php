@@ -2,7 +2,7 @@
 
 function db_connect() {
     $link = mysql_connect('wtbest.org','wtbestor_wtbest','wtb3$t');
-    $link = mysql_connect('localhost','root');
+    // $link = mysql_connect('localhost','root');
     
     if(!$link) {
         die('Could not connect: ' . mysql_error());
