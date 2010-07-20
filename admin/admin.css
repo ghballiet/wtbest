@@ -52,7 +52,7 @@
   -moz-box-shadow: inset 0px 3px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0px 3px rgba(0, 0, 0, 0.075);
   border: solid 1px #999999;
-  width: 100%;
+ 
   color: rgba(0, 0, 0, 0.6);
 }
 #login_form input[type="password"] {
@@ -63,7 +63,7 @@
   -moz-box-shadow: inset 0px 3px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0px 3px rgba(0, 0, 0, 0.075);
   border: solid 1px #999999;
-  width: 100%;
+
   color: rgba(0, 0, 0, 0.6);
 }
 #login_form input[type="text"]:focus {
